@@ -1,10 +1,84 @@
 import { Card, CardContent } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
+import { Dialog, DialogContent, DialogHeader, DialogTitle, DialogTrigger } from "@/components/ui/dialog";
 import { ThemeToggle } from "@/components/ThemeToggle";
 import ImageSlider from "@/components/ImageSlider";
-import { Github, Linkedin, Twitter, ExternalLink, Code, Gamepad2 } from "lucide-react";
+import { Github, Linkedin, Twitter, ExternalLink, Code, Gamepad2, Image } from "lucide-react";
+import { useState } from "react";
+
+// Featured Projects Data - You can edit this
+const featuredProjects = [
+  {
+    id: 1,
+    name: "[Project 1 Name]",
+    description: "[Add project description, technologies used, and key achievements]",
+    sourceCode: "",
+    screenshots: [
+      // Add 4 screenshot URLs here when ready
+      "", "", "", ""
+    ]
+  },
+  {
+    id: 2,
+    name: "[Project 2 Name]",
+    description: "[Add project description, technologies used, and key achievements]",
+    sourceCode: "",
+    screenshots: [
+      // Add 4 screenshot URLs here when ready
+      "", "", "", ""
+    ]
+  },
+  {
+    id: 3,
+    name: "[Project 3 Name]",
+    description: "[Add project description, technologies used, and key achievements]",
+    sourceCode: "",
+    screenshots: [
+      // Add 4 screenshot URLs here when ready
+      "", "", "", ""
+    ]
+  },
+  {
+    id: 4,
+    name: "[Project 4 Name]",
+    description: "[Add project description, technologies used, and key achievements]",
+    sourceCode: "",
+    screenshots: [
+      // Add 4 screenshot URLs here when ready
+      "", "", "", ""
+    ]
+  },
+  {
+    id: 5,
+    name: "[Project 5 Name]",
+    description: "[Add project description, technologies used, and key achievements]",
+    sourceCode: "",
+    screenshots: [
+      // Add 4 screenshot URLs here when ready
+      "", "", "", ""
+    ]
+  },
+  {
+    id: 6,
+    name: "[Project 6 Name]",
+    description: "[Add project description, technologies used, and key achievements]",
+    sourceCode: "",
+    screenshots: [
+      // Add 4 screenshot URLs here when ready
+      "", "", "", ""
+    ]
+  }
+];
 
 const Portfolio = () => {
+  const [selectedProjectScreenshots, setSelectedProjectScreenshots] = useState<string[]>([]);
+  const [isScreenshotsOpen, setIsScreenshotsOpen] = useState(false);
+
+  const openScreenshots = (screenshots: string[]) => {
+    setSelectedProjectScreenshots(screenshots);
+    setIsScreenshotsOpen(true);
+  };
+
   return (
     <div className="min-h-screen bg-background">
       {/* Navigation */}
@@ -38,10 +112,6 @@ const Portfolio = () => {
             <Button size="lg" className="bg-primary hover:bg-primary/90">
               <Code className="w-4 h-4 mr-2" />
               View My Work
-            </Button>
-            <Button variant="outline" size="lg">
-              <Gamepad2 className="w-4 h-4 mr-2" />
-              Play Games
             </Button>
           </div>
         </div>
@@ -252,30 +322,68 @@ const Portfolio = () => {
           {/* Development Projects */}
           <h3 className="text-2xl font-semibold mb-8 text-center">Featured Projects</h3>
           <div className="grid md:grid-cols-2 gap-8">
-            {[1, 2, 3, 4].map((project) => (
-              <Card key={project} className="glass-card group hover:scale-105 transition-transform">
+            {featuredProjects.map((project) => (
+              <Card key={project.id} className="glass-card group hover:scale-105 transition-transform">
                 <CardContent className="p-6">
                   <div className="aspect-video bg-gradient-to-br from-primary/10 to-accent/10 rounded-lg flex items-center justify-center mb-4">
                     <Code className="w-12 h-12 text-primary/60" />
                   </div>
-                  <h4 className="text-xl font-semibold mb-2">[Project {project} Name]</h4>
+                  <h4 className="text-xl font-semibold mb-2">{project.name}</h4>
                   <p className="text-muted-foreground mb-4">
-                    [Add project description, technologies used, and key achievements]
+                    {project.description}
                   </p>
                   <div className="flex gap-2 flex-wrap">
-                    <Button size="sm">
-                      <ExternalLink className="w-3 h-3 mr-1" />
-                      Live Demo
+                    <Button 
+                      size="sm" 
+                      variant="outline"
+                      onClick={() => openScreenshots(project.screenshots)}
+                    >
+                      <Image className="w-3 h-3 mr-1" />
+                      Screenshots
                     </Button>
-                    <Button size="sm" variant="outline">
-                      <Github className="w-3 h-3 mr-1" />
-                      Source Code
+                    <Button size="sm" variant="outline" asChild>
+                      <a
+                        href={project.sourceCode}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                      >
+                        <Github className="w-3 h-3 mr-1" />
+                        Source Code
+                      </a>
                     </Button>
                   </div>
                 </CardContent>
               </Card>
             ))}
           </div>
+
+          {/* Screenshots Modal */}
+          <Dialog open={isScreenshotsOpen} onOpenChange={setIsScreenshotsOpen}>
+            <DialogContent className="max-w-4xl">
+              <DialogHeader>
+                <DialogTitle>Project Screenshots</DialogTitle>
+              </DialogHeader>
+              <div className="grid grid-cols-2 gap-4 mt-4">
+                {selectedProjectScreenshots.map((screenshot, index) => (
+                  <div key={index} className="aspect-video bg-muted/20 rounded-lg flex items-center justify-center">
+                    {screenshot ? (
+                      <img 
+                        src={screenshot} 
+                        alt={`Screenshot ${index + 1}`}
+                        className="w-full h-full object-cover rounded-lg"
+                      />
+                    ) : (
+                      <div className="text-muted-foreground text-center">
+                        <Image className="w-8 h-8 mx-auto mb-2" />
+                        <p className="text-sm">Screenshot {index + 1}</p>
+                        <p className="text-xs">Add URL to featuredProjects array</p>
+                      </div>
+                    )}
+                  </div>
+                ))}
+              </div>
+            </DialogContent>
+          </Dialog>
         </div>
       </section>
 
