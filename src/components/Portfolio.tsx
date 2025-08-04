@@ -64,11 +64,6 @@ const Portfolio = () => {
                 </div>
                 <div className="aspect-square bg-gradient-to-br from-primary/20 to-accent/20 rounded-lg flex items-center justify-center">
                   <span className="text-4xl font-bold text-primary/50">[YOUR PHOTO]</span>
-                  <img 
-                    src="https://img.itch.zone/aW1hZ2UvODAxODQyLzE0MTMwODc0LnBuZw==/original/InHoxU.png" 
-                    alt="Your Name" 
-                    className="w-full h-full object-cover"
-                  />
                 </div>
               </div>
             </CardContent>
