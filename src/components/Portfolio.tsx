@@ -2,81 +2,9 @@ import { Card, CardContent } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { ThemeToggle } from "@/components/ThemeToggle";
 import ImageSlider from "@/components/ImageSlider";
-import { Github, Linkedin, Twitter, ExternalLink, Code, Gamepad2, Upload } from "lucide-react";
-
-// Featured Games Data - Edit this array to update your games
-const featuredGames = [
-  {
-    id: 1,
-    title: "Game Title 1",
-    description: "Add your game description, genre, and key features here",
-    demoUrl: "#",
-    learnMoreUrl: "#",
-    image: null // Add image URL when available
-  },
-  {
-    id: 2,
-    title: "Game Title 2", 
-    description: "Add your game description, genre, and key features here",
-    demoUrl: "#",
-    learnMoreUrl: "#",
-    image: null
-  },
-  {
-    id: 3,
-    title: "Game Title 3",
-    description: "Add your game description, genre, and key features here", 
-    demoUrl: "#",
-    learnMoreUrl: "#",
-    image: null
-  }
-];
-
-// Featured Projects Data - Edit this array to update your projects
-const featuredProjects = [
-  {
-    id: 1,
-    title: "Project Name 1",
-    description: "Add project description, technologies used, and key achievements here",
-    liveUrl: "#",
-    githubUrl: "#",
-    image: null
-  },
-  {
-    id: 2,
-    title: "Project Name 2",
-    description: "Add project description, technologies used, and key achievements here",
-    liveUrl: "#", 
-    githubUrl: "#",
-    image: null
-  },
-  {
-    id: 3,
-    title: "Project Name 3",
-    description: "Add project description, technologies used, and key achievements here",
-    liveUrl: "#",
-    githubUrl: "#", 
-    image: null
-  },
-  {
-    id: 4,
-    title: "Project Name 4",
-    description: "Add project description, technologies used, and key achievements here",
-    liveUrl: "#",
-    githubUrl: "#",
-    image: null
-  }
-];
+import { Github, Linkedin, Twitter, ExternalLink, Code, Gamepad2 } from "lucide-react";
 
 const Portfolio = () => {
-  const handleResumeUpload = (event: React.ChangeEvent<HTMLInputElement>) => {
-    const file = event.target.files?.[0];
-    if (file) {
-      // Handle resume upload here - you can integrate with your preferred storage solution
-      console.log("Resume uploaded:", file.name);
-      // For now, just log the file. You can add actual upload logic later.
-    }
-  };
   return (
     <div className="min-h-screen bg-background">
       {/* Navigation */}
@@ -110,6 +38,10 @@ const Portfolio = () => {
             <Button size="lg" className="bg-primary hover:bg-primary/90">
               <Code className="w-4 h-4 mr-2" />
               View My Work
+            </Button>
+            <Button variant="outline" size="lg">
+              <Gamepad2 className="w-4 h-4 mr-2" />
+              Play Games
             </Button>
           </div>
         </div>
@@ -183,39 +115,72 @@ const Portfolio = () => {
           {/* Games Portfolio */}
           <h3 className="text-2xl font-semibold mb-8 text-center">Featured Games</h3>
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
-            {featuredGames.map((game) => (
-              <Card key={game.id} className="glass-card group hover:scale-105 transition-transform">
-                <CardContent className="p-0">
-                  <div className="aspect-video bg-gradient-to-br from-primary/10 to-accent/10 rounded-t-lg flex items-center justify-center">
-                    {game.image ? (
-                      <img src={game.image} alt={game.title} className="w-full h-full object-cover rounded-t-lg" />
-                    ) : (
-                      <Gamepad2 className="w-12 h-12 text-primary/60" />
-                    )}
+          {/* Section 1 */}
+          { [1, 2, 3].slice(0, 1).map((game) => (
+            <Card key={`s1-${game}`} className="glass-card group hover:scale-105 transition-transform">
+              <CardContent className="p-0">
+                <div className="aspect-video bg-gradient-to-br from-primary/10 to-accent/10 rounded-t-lg flex items-center justify-center">
+                  <Gamepad2 className="w-12 h-12 text-primary/60" />
+                </div>
+                <div className="p-6">
+                  <h4 className="text-xl font-semibold mb-2">[Game {game} Title]</h4>
+                  <p className="text-muted-foreground mb-4">[Add game description, genre, and key features]</p>
+                  <div className="flex gap-2">
+                    <Button size="sm" variant="outline">
+                      <ExternalLink className="w-3 h-3 mr-1" />
+                      Play Demo
+                    </Button>
+                    <Button size="sm" variant="ghost">Learn More</Button>
                   </div>
-                  <div className="p-6">
-                    <h4 className="text-xl font-semibold mb-2">{game.title}</h4>
-                    <p className="text-muted-foreground mb-4">
-                      {game.description}
-                    </p>
-                    <div className="flex gap-2">
-                      <Button size="sm" variant="outline" asChild>
-                        <a href={game.demoUrl} target="_blank" rel="noopener noreferrer">
-                          <ExternalLink className="w-3 h-3 mr-1" />
-                          Play Demo
-                        </a>
-                      </Button>
-                      <Button size="sm" variant="ghost" asChild>
-                        <a href={game.learnMoreUrl} target="_blank" rel="noopener noreferrer">
-                          Learn More
-                        </a>
-                      </Button>
-                    </div>
+                </div>
+              </CardContent>
+            </Card>
+          ))}
+        
+          {/* Section 2 */}
+          { [1, 2, 3].slice(1, 2).map((game) => (
+            <Card key={`s2-${game}`} className="glass-card group hover:scale-105 transition-transform">
+              <CardContent className="p-0">
+                <div className="aspect-video bg-gradient-to-br from-primary/10 to-accent/10 rounded-t-lg flex items-center justify-center">
+                  <Gamepad2 className="w-12 h-12 text-primary/60" />
+                </div>
+                <div className="p-6">
+                  <h4 className="text-xl font-semibold mb-2">[Game {game} Title]</h4>
+                  <p className="text-muted-foreground mb-4">[Add game description, genre, and key features]</p>
+                  <div className="flex gap-2">
+                    <Button size="sm" variant="outline">
+                      <ExternalLink className="w-3 h-3 mr-1" />
+                      Play Demo
+                    </Button>
+                    <Button size="sm" variant="ghost">Learn More</Button>
                   </div>
-                </CardContent>
-              </Card>
-            ))}
-          </div>
+                </div>
+              </CardContent>
+            </Card>
+          ))}
+        
+          {/* Section 3 */}
+          { [1, 2, 3].slice(2, 3).map((game) => (
+            <Card key={`s3-${game}`} className="glass-card group hover:scale-105 transition-transform">
+              <CardContent className="p-0">
+                <div className="aspect-video bg-gradient-to-br from-primary/10 to-accent/10 rounded-t-lg flex items-center justify-center">
+                  <Gamepad2 className="w-12 h-12 text-primary/60" />
+                </div>
+                <div className="p-6">
+                  <h4 className="text-xl font-semibold mb-2">[Game {game} Title]</h4>
+                  <p className="text-muted-foreground mb-4">[Add game description, genre, and key features]</p>
+                  <div className="flex gap-2">
+                    <Button size="sm" variant="outline">
+                      <ExternalLink className="w-3 h-3 mr-1" />
+                      Play Demo
+                    </Button>
+                    <Button size="sm" variant="ghost">Learn More</Button>
+                  </div>
+                </div>
+              </CardContent>
+            </Card>
+          ))}
+        </div>
         </div>
       </section>
 
@@ -245,21 +210,6 @@ const Portfolio = () => {
                   View GitHub
                 </Button>
                 <Button variant="outline">Download Resume</Button>
-                <div>
-                  <input
-                    type="file"
-                    accept=".pdf,.doc,.docx"
-                    onChange={handleResumeUpload}
-                    className="hidden"
-                    id="resume-upload"
-                  />
-                  <Button variant="outline" asChild>
-                    <label htmlFor="resume-upload" className="cursor-pointer">
-                      <Upload className="w-4 h-4 mr-2" />
-                      Upload Resume
-                    </label>
-                  </Button>
-                </div>
               </div>
             </div>
           </div>
@@ -282,32 +232,24 @@ const Portfolio = () => {
           {/* Development Projects */}
           <h3 className="text-2xl font-semibold mb-8 text-center">Featured Projects</h3>
           <div className="grid md:grid-cols-2 gap-8">
-            {featuredProjects.map((project) => (
-              <Card key={project.id} className="glass-card group hover:scale-105 transition-transform">
+            {[1, 2, 3, 4].map((project) => (
+              <Card key={project} className="glass-card group hover:scale-105 transition-transform">
                 <CardContent className="p-6">
                   <div className="aspect-video bg-gradient-to-br from-primary/10 to-accent/10 rounded-lg flex items-center justify-center mb-4">
-                    {project.image ? (
-                      <img src={project.image} alt={project.title} className="w-full h-full object-cover rounded-lg" />
-                    ) : (
-                      <Code className="w-12 h-12 text-primary/60" />
-                    )}
+                    <Code className="w-12 h-12 text-primary/60" />
                   </div>
-                  <h4 className="text-xl font-semibold mb-2">{project.title}</h4>
+                  <h4 className="text-xl font-semibold mb-2">[Project {project} Name]</h4>
                   <p className="text-muted-foreground mb-4">
-                    {project.description}
+                    [Add project description, technologies used, and key achievements]
                   </p>
                   <div className="flex gap-2 flex-wrap">
-                    <Button size="sm" asChild>
-                      <a href={project.liveUrl} target="_blank" rel="noopener noreferrer">
-                        <ExternalLink className="w-3 h-3 mr-1" />
-                        Live Demo
-                      </a>
+                    <Button size="sm">
+                      <ExternalLink className="w-3 h-3 mr-1" />
+                      Live Demo
                     </Button>
-                    <Button size="sm" variant="outline" asChild>
-                      <a href={project.githubUrl} target="_blank" rel="noopener noreferrer">
-                        <Github className="w-3 h-3 mr-1" />
-                        Source Code
-                      </a>
+                    <Button size="sm" variant="outline">
+                      <Github className="w-3 h-3 mr-1" />
+                      Source Code
                     </Button>
                   </div>
                 </CardContent>
