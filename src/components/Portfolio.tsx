@@ -64,8 +64,8 @@ const Portfolio = () => {
                   </p>
                 </div>
                 <ImageSlider
-                  beforeImage="/lovable-uploads/de5c5eaf-747d-4f09-afb6-aa7528e83826.png"
-                  afterImage="/lovable-uploads/752abd3d-3c2c-4159-ba13-f552fe01007a.png"
+                  beforeImage="/lovable-uploads/752abd3d-3c2c-4159-ba13-f552fe01007a.png"
+                  afterImage="/lovable-uploads/de5c5eaf-747d-4f09-afb6-aa7528e83826.png"
                   beforeAlt="Guilherme Campos Amancio - Real Photo"
                   afterAlt="Guilherme Campos Amancio - Alter Ego"
                 />
