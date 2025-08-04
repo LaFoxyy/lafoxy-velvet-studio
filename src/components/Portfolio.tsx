@@ -87,10 +87,10 @@ const Portfolio = () => {
             <div>
               <h3 className="text-3xl font-semibold mb-4">About Velvet Paws Studio</h3>
               <p className="text-muted-foreground mb-6">
-                [Add description of your game company - its mission, vision, and what types of games you create]
+                Velvet Paws Studio is my personal indie game development space, dedicated to learning, experimenting, and growing as a developer. My mission is to explore new ideas, build my skills, and create games that challenge me creatively and technically. While I dream of one day crafting something truly big and memorable, for now, this is my playground for turning concepts into working games—mostly for my own enjoyment and as a way to push my abilities forward.
               </p>
               <p className="text-muted-foreground mb-6">
-                [Add more details about your game development philosophy and approach]
+                I see game development as both a craft and a journey. Every project is a step toward mastering the art of blending gameplay, storytelling, and design. I experiment with different genres, mechanics, and styles, treating each game as both a finished product and a lesson for the next one. Velvet Paws Studio is where passion meets practice, and every line of code is part of building toward that future big dream.
               </p>
               <Button className="bg-accent hover:bg-accent/90">
                 Visit Studio Website
@@ -98,7 +98,7 @@ const Portfolio = () => {
             </div>
             <div className="aspect-video bg-gradient-to-r from-accent/20 to-primary/20 rounded-lg overflow-hidden">
               <img 
-                src="https://images.unsplash.com/photo-1485827404703-89b55fcc595e?w=600&h=400&fit=crop" 
+                src="https://i.imgur.com/7C7hA9G.png" 
                 alt="Velvet Paws Studio Logo/Banner"
                 className="w-full h-full object-cover"
               />
