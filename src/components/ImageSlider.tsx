@@ -13,7 +13,7 @@ const ImageSlider: React.FC<ImageSliderProps> = ({
   beforeAlt,
   afterAlt,
 }) => {
-  const [sliderPosition, setSliderPosition] = useState(50);
+  const [sliderPosition, setSliderPosition] = useState(100);
   const [isDragging, setIsDragging] = useState(false);
   const containerRef = useRef<HTMLDivElement>(null);
 
