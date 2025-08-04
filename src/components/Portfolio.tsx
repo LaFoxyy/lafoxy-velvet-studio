@@ -96,11 +96,11 @@ const Portfolio = () => {
                 Visit Studio Website
               </Button>
             </div>
-            <div className="aspect-video bg-gradient-to-r from-accent/20 to-primary/20 rounded-lg overflow-hidden">
+            <div className="aspect-video bg-gradient-to-r from-accent/20 to-primary/20 rounded-lg overflow-hidden flex items-center justify-center">
               <img 
                 src="https://i.imgur.com/7C7hA9G.png" 
                 alt="Velvet Paws Studio Logo/Banner"
-                className="w-full h-full object-cover"
+                className="max-w-full max-h-full object-contain"
               />
             </div>
           </div>
