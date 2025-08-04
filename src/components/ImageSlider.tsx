@@ -98,7 +98,7 @@ const ImageSlider: React.FC<ImageSliderProps> = ({
       {/* Instructions */}
       <div className="absolute bottom-4 left-4 right-4 text-center">
         <p className="text-xs text-white/80 bg-black/50 px-3 py-1 rounded-full backdrop-blur-sm">
-          Drag to reveal alter ego →
+          Drag to reveal →
         </p>
       </div>
     </div>
