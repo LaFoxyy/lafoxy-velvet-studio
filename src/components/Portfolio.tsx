@@ -328,7 +328,7 @@ const Portfolio = () => {
       <footer className="py-8 px-6 border-t border-border">
         <div className="container mx-auto text-center">
           <p className="text-muted-foreground">
-            © 2024 LaFoxy & Velvet Paws Studio. All rights reserved.
+            © 2025 LaFoxy & Velvet Paws Studio. All rights reserved.
           </p>
         </div>
       </footer>
