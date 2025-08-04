@@ -93,6 +93,12 @@ const Portfolio = () => {
                 I see game development as both a craft and a journey. Every project is a step toward mastering the art of blending gameplay, storytelling, and design. I experiment with different genres, mechanics, and styles, treating each game as both a finished product and a lesson for the next one. Velvet Paws Studio is where passion meets practice, and every line of code is part of building toward that future big dream.
               </p>
               <Button className="bg-accent hover:bg-accent/90">
+                <Link
+                  href="https://velvet-paws-studio.itch.io"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  aria-label="Visit Velvet Paws Studio website"
+                >
                 Visit Studio Website
               </Button>
             </div>
