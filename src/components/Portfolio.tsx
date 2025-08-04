@@ -119,8 +119,12 @@ const Portfolio = () => {
             { [1, 2, 3].slice(0, 1).map((game) => (
               <Card key={`s1-${game}`} className="glass-card group hover:scale-105 transition-transform">
                 <CardContent className="p-0">
-                  <div className="aspect-video bg-gradient-to-br from-primary/10 to-accent/10 rounded-t-lg flex items-center justify-center">
-                    <Gamepad2 className="w-12 h-12 text-primary/60" />
+                   <div className="aspect-video rounded-t-lg overflow-hidden">
+                    <img
+                      src="https://img.itch.zone/aW1hZ2UvODAxODQyLzE0MTMwODc0LnBuZw==/original/InHoxU.png"
+                      alt="Zombielator Survival Screenshot"
+                      className="w-full h-full object-cover"
+                    />
                   </div>
                   <div className="p-6">
                     <h4 className="text-xl font-semibold mb-2">Zombielator Survival</h4>
