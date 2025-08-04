@@ -13,7 +13,7 @@ const ImageSlider: React.FC<ImageSliderProps> = ({
   beforeAlt,
   afterAlt,
 }) => {
-  const [sliderPosition, setSliderPosition] = useState(50);
+  const [sliderPosition, setSliderPosition] = useState(0);
   const [isDragging, setIsDragging] = useState(false);
   const containerRef = useRef<HTMLDivElement>(null);
 
@@ -23,6 +23,8 @@ const ImageSlider: React.FC<ImageSliderProps> = ({
 
   const handleMouseUp = useCallback(() => {
     setIsDragging(false);
+    // Animate back to default position
+    setSliderPosition(0);
   }, []);
 
   const handleMouseMove = useCallback((e: React.MouseEvent<HTMLDivElement>) => {
@@ -40,6 +42,8 @@ const ImageSlider: React.FC<ImageSliderProps> = ({
 
   const handleTouchEnd = useCallback(() => {
     setIsDragging(false);
+    // Animate back to default position
+    setSliderPosition(0);
   }, []);
 
   const handleTouchMove = useCallback((e: React.TouchEvent<HTMLDivElement>) => {
@@ -65,13 +69,13 @@ const ImageSlider: React.FC<ImageSliderProps> = ({
       <img
         src={beforeImage}
         alt={beforeAlt}
-        className="absolute inset-0 w-full h-full object-cover"
+        className="absolute inset-0 w-full h-full object-cover transition-all duration-300 ease-out"
         draggable={false}
       />
       
       {/* After Image (Reveal) */}
       <div 
-        className="absolute inset-0 overflow-hidden"
+        className="absolute inset-0 overflow-hidden transition-all duration-300 ease-out"
         style={{ clipPath: `inset(0 ${100 - sliderPosition}% 0 0)` }}
       >
         <img
@@ -84,7 +88,7 @@ const ImageSlider: React.FC<ImageSliderProps> = ({
 
       {/* Slider Handle */}
       <div
-        className="absolute top-0 bottom-0 w-1 bg-white/80 shadow-lg z-10 cursor-ew-resize"
+        className="absolute top-0 bottom-0 w-1 bg-white/80 shadow-lg z-10 cursor-ew-resize transition-all duration-300 ease-out"
         style={{ left: `${sliderPosition}%`, transform: 'translateX(-50%)' }}
         onMouseDown={handleMouseDown}
         onTouchStart={handleTouchStart}
@@ -98,7 +102,7 @@ const ImageSlider: React.FC<ImageSliderProps> = ({
       {/* Instructions */}
       <div className="absolute bottom-4 left-4 right-4 text-center">
         <p className="text-xs text-white/80 bg-black/50 px-3 py-1 rounded-full backdrop-blur-sm">
-          Drag to reveal alter ego →
+          Drag to reveal real photo →
         </p>
       </div>
     </div>
