@@ -1,5 +1,7 @@
 import { Card, CardContent } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
+import { ThemeToggle } from "@/components/ThemeToggle";
+import { Github, Linkedin, Twitter, ExternalLink, Code, Gamepad2 } from "lucide-react";
 
 const Portfolio = () => {
   return (
@@ -9,31 +11,63 @@ const Portfolio = () => {
         <div className="container mx-auto px-6 py-4">
           <div className="flex justify-between items-center">
             <h1 className="text-2xl font-bold gradient-text">LaFoxy</h1>
-            <div className="flex gap-6">
-              <a href="#about" className="text-foreground/80 hover:text-foreground transition-colors">About</a>
-              <a href="#velvet-paws" className="text-foreground/80 hover:text-foreground transition-colors">Velvet Paws Studio</a>
-              <a href="#lafoxy" className="text-foreground/80 hover:text-foreground transition-colors">LaFoxy</a>
-              <a href="#contact" className="text-foreground/80 hover:text-foreground transition-colors">Contact</a>
+            <div className="flex items-center gap-6">
+              <div className="hidden md:flex gap-6">
+                <a href="#about" className="text-foreground/80 hover:text-foreground transition-colors">About</a>
+                <a href="#velvet-paws" className="text-foreground/80 hover:text-foreground transition-colors">Velvet Paws Studio</a>
+                <a href="#lafoxy" className="text-foreground/80 hover:text-foreground transition-colors">LaFoxy</a>
+                <a href="#contact" className="text-foreground/80 hover:text-foreground transition-colors">Contact</a>
+              </div>
+              <ThemeToggle />
             </div>
           </div>
         </div>
       </nav>
 
       {/* Hero Section */}
-      <section className="pt-24 pb-16 px-6">
-        <div className="container mx-auto text-center">
+      <section className="pt-24 pb-16 px-6 relative overflow-hidden">
+        {/* Background cute elements */}
+        <div className="absolute inset-0 pointer-events-none">
+          <img 
+            src="https://images.unsplash.com/photo-1582562124811-c09040d0a901?w=100&h=100&fit=crop&crop=face" 
+            alt="Cute cat" 
+            className="absolute top-20 right-10 w-16 h-16 rounded-full opacity-20 animate-bounce"
+            style={{ animationDelay: '0.5s' }}
+          />
+          <img 
+            src="https://images.unsplash.com/photo-1535268647677-300dbf3d78d1?w=100&h=100&fit=crop&crop=face" 
+            alt="Cute kitten" 
+            className="absolute bottom-20 left-10 w-20 h-20 rounded-full opacity-20 animate-bounce"
+            style={{ animationDelay: '1s' }}
+          />
+          <img 
+            src="https://images.unsplash.com/photo-1485827404703-89b55fcc595e?w=100&h=100&fit=crop&crop=center" 
+            alt="Cute robot" 
+            className="absolute top-1/2 left-20 w-12 h-12 rounded-full opacity-30 animate-pulse"
+          />
+        </div>
+        <div className="container mx-auto text-center relative z-10">
+          <div className="flex justify-center mb-6">
+            <img 
+              src="https://images.unsplash.com/photo-1441057206919-63d19fac2369?w=120&h=120&fit=crop&crop=center" 
+              alt="Cute penguins" 
+              className="w-24 h-24 rounded-full border-4 border-primary/20"
+            />
+          </div>
           <h1 className="text-6xl font-bold mb-6">
             <span className="gradient-text">Portfolio</span>
           </h1>
           <p className="text-xl text-muted-foreground mb-8 max-w-2xl mx-auto">
             Welcome to my creative space. Here you'll find my work as a developer and game creator.
           </p>
-          <div className="flex gap-4 justify-center">
+          <div className="flex gap-4 justify-center flex-wrap">
             <Button size="lg" className="bg-primary hover:bg-primary/90">
+              <Code className="w-4 h-4 mr-2" />
               View My Work
             </Button>
             <Button variant="outline" size="lg">
-              Get In Touch
+              <Gamepad2 className="w-4 h-4 mr-2" />
+              Play Games
             </Button>
           </div>
         </div>
@@ -55,8 +89,12 @@ const Portfolio = () => {
                     [Add more details about your journey, experience, and what drives you in your work]
                   </p>
                 </div>
-                <div className="aspect-square bg-muted rounded-lg flex items-center justify-center">
-                  <span className="text-muted-foreground">[Your Photo Here]</span>
+                <div className="aspect-square bg-gradient-to-br from-primary/20 to-accent/20 rounded-lg flex items-center justify-center overflow-hidden">
+                  <img 
+                    src="https://images.unsplash.com/photo-1582562124811-c09040d0a901?w=300&h=300&fit=crop&crop=face" 
+                    alt="Your photo placeholder" 
+                    className="w-full h-full object-cover rounded-lg"
+                  />
                 </div>
               </div>
             </CardContent>
@@ -85,8 +123,15 @@ const Portfolio = () => {
                 Visit Studio Website
               </Button>
             </div>
-            <div className="aspect-video bg-muted rounded-lg flex items-center justify-center">
-              <span className="text-muted-foreground">[Studio Logo or Featured Game Screenshot]</span>
+            <div className="aspect-video bg-gradient-to-r from-accent/20 to-primary/20 rounded-lg flex items-center justify-center overflow-hidden relative">
+              <img 
+                src="https://images.unsplash.com/photo-1535268647677-300dbf3d78d1?w=600&h=400&fit=crop&crop=center" 
+                alt="Velvet Paws Studio" 
+                className="w-full h-full object-cover rounded-lg"
+              />
+              <div className="absolute inset-0 bg-black/20 flex items-center justify-center">
+                <span className="text-white font-bold text-xl bg-black/50 px-4 py-2 rounded-lg">Velvet Paws Studio</span>
+              </div>
             </div>
           </div>
 
@@ -96,8 +141,15 @@ const Portfolio = () => {
             {[1, 2, 3].map((game) => (
               <Card key={game} className="glass-card group hover:scale-105 transition-transform">
                 <CardContent className="p-0">
-                  <div className="aspect-video bg-muted rounded-t-lg flex items-center justify-center mb-4">
-                    <span className="text-muted-foreground">[Game {game} Screenshot]</span>
+                  <div className="aspect-video bg-gradient-to-br from-primary/10 to-accent/10 rounded-t-lg flex items-center justify-center overflow-hidden relative">
+                    <img 
+                      src="https://images.unsplash.com/photo-1485827404703-89b55fcc595e?w=400&h=300&fit=crop&crop=center" 
+                      alt={`Game ${game} screenshot`} 
+                      className="w-full h-full object-cover"
+                    />
+                    <div className="absolute inset-0 bg-black/10 flex items-center justify-center">
+                      <Gamepad2 className="w-12 h-12 text-white/80" />
+                    </div>
                   </div>
                   <div className="p-6">
                     <h4 className="text-xl font-semibold mb-2">[Game {game} Title]</h4>
@@ -105,7 +157,10 @@ const Portfolio = () => {
                       [Add game description, genre, and key features]
                     </p>
                     <div className="flex gap-2">
-                      <Button size="sm" variant="outline">Play Demo</Button>
+                      <Button size="sm" variant="outline">
+                        <ExternalLink className="w-3 h-3 mr-1" />
+                        Play Demo
+                      </Button>
                       <Button size="sm" variant="ghost">Learn More</Button>
                     </div>
                   </div>
@@ -125,8 +180,12 @@ const Portfolio = () => {
           </p>
           
           <div className="grid lg:grid-cols-2 gap-8 items-center mb-12">
-            <div className="aspect-video bg-muted rounded-lg flex items-center justify-center">
-              <span className="text-muted-foreground">[Developer Setup Photo or Code Screenshot]</span>
+            <div className="aspect-video bg-gradient-to-r from-primary/20 to-accent/20 rounded-lg flex items-center justify-center overflow-hidden">
+              <img 
+                src="https://images.unsplash.com/photo-1498050108023-c5249f4df085?w=600&h=400&fit=crop&crop=center" 
+                alt="Developer workspace" 
+                className="w-full h-full object-cover rounded-lg"
+              />
             </div>
             <div>
               <h3 className="text-3xl font-semibold mb-4">Development Expertise</h3>
@@ -136,8 +195,11 @@ const Portfolio = () => {
               <p className="text-muted-foreground mb-6">
                 [Add information about your development approach and what makes your work unique]
               </p>
-              <div className="flex gap-4">
-                <Button>View GitHub</Button>
+              <div className="flex gap-4 flex-wrap">
+                <Button>
+                  <Github className="w-4 h-4 mr-2" />
+                  View GitHub
+                </Button>
                 <Button variant="outline">Download Resume</Button>
               </div>
             </div>
@@ -164,16 +226,29 @@ const Portfolio = () => {
             {[1, 2, 3, 4].map((project) => (
               <Card key={project} className="glass-card group hover:scale-105 transition-transform">
                 <CardContent className="p-6">
-                  <div className="aspect-video bg-muted rounded-lg flex items-center justify-center mb-4">
-                    <span className="text-muted-foreground">[Project {project} Screenshot]</span>
+                  <div className="aspect-video bg-gradient-to-br from-primary/10 to-accent/10 rounded-lg flex items-center justify-center mb-4 overflow-hidden relative">
+                    <img 
+                      src="https://images.unsplash.com/photo-1487058792275-0ad4aaf24ca7?w=400&h=300&fit=crop&crop=center" 
+                      alt={`Project ${project} screenshot`} 
+                      className="w-full h-full object-cover"
+                    />
+                    <div className="absolute inset-0 bg-black/10 flex items-center justify-center">
+                      <Code className="w-12 h-12 text-white/80" />
+                    </div>
                   </div>
                   <h4 className="text-xl font-semibold mb-2">[Project {project} Name]</h4>
                   <p className="text-muted-foreground mb-4">
                     [Add project description, technologies used, and key achievements]
                   </p>
-                  <div className="flex gap-2">
-                    <Button size="sm">Live Demo</Button>
-                    <Button size="sm" variant="outline">Source Code</Button>
+                  <div className="flex gap-2 flex-wrap">
+                    <Button size="sm">
+                      <ExternalLink className="w-3 h-3 mr-1" />
+                      Live Demo
+                    </Button>
+                    <Button size="sm" variant="outline">
+                      <Github className="w-3 h-3 mr-1" />
+                      Source Code
+                    </Button>
                   </div>
                 </CardContent>
               </Card>
@@ -198,10 +273,19 @@ const Portfolio = () => {
                 </div>
                 <div>
                   <h4 className="font-semibold mb-2">Social Links</h4>
-                  <div className="flex gap-4 justify-center">
-                    <Button variant="outline" size="sm">[GitHub]</Button>
-                    <Button variant="outline" size="sm">[LinkedIn]</Button>
-                    <Button variant="outline" size="sm">[Twitter]</Button>
+                  <div className="flex gap-3 justify-center">
+                    <Button variant="outline" size="sm" className="flex items-center gap-2">
+                      <Github className="w-4 h-4" />
+                      GitHub
+                    </Button>
+                    <Button variant="outline" size="sm" className="flex items-center gap-2">
+                      <Linkedin className="w-4 h-4" />
+                      LinkedIn
+                    </Button>
+                    <Button variant="outline" size="sm" className="flex items-center gap-2">
+                      <Twitter className="w-4 h-4" />
+                      Twitter
+                    </Button>
                   </div>
                 </div>
               </div>
