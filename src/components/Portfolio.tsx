@@ -98,7 +98,7 @@ const Portfolio = () => {
                   target="_blank"
                   rel="noopener noreferrer"
                   aria-label="Visit Velvet Paws Studio website"
-                >
+                />
                 Visit Studio Website
               </Button>
             </div>
