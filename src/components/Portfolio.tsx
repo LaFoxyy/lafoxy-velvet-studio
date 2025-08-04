@@ -115,7 +115,6 @@ const Portfolio = () => {
           {/* Games Portfolio */}
           <h3 className="text-2xl font-semibold mb-8 text-center">Featured Games</h3>
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
             {/* Section 1 */}
             { [1, 2, 3].slice(0, 1).map((game) => (
               <Card key={`s1-${game}`} className="glass-card group hover:scale-105 transition-transform">
@@ -182,7 +181,6 @@ const Portfolio = () => {
               </Card>
             ))}
           </div>
-        </div>
       </section>
 
       {/* LaFoxy Developer Section */}
