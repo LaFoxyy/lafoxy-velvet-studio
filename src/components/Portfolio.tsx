@@ -115,72 +115,29 @@ const Portfolio = () => {
           {/* Games Portfolio */}
           <h3 className="text-2xl font-semibold mb-8 text-center">Featured Games</h3>
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
-          {/* Section 1 */}
-          { [1, 2, 3].slice(0, 1).map((game) => (
-            <Card key={`s1-${game}`} className="glass-card group hover:scale-105 transition-transform">
-              <CardContent className="p-0">
-                <div className="aspect-video bg-gradient-to-br from-primary/10 to-accent/10 rounded-t-lg flex items-center justify-center">
-                  <Gamepad2 className="w-12 h-12 text-primary/60" />
-                </div>
-                <div className="p-6">
-                  <h4 className="text-xl font-semibold mb-2">[Game {game} Title]</h4>
-                  <p className="text-muted-foreground mb-4">[Add game description, genre, and key features]</p>
-                  <div className="flex gap-2">
-                    <Button size="sm" variant="outline">
-                      <ExternalLink className="w-3 h-3 mr-1" />
-                      Play Demo
-                    </Button>
-                    <Button size="sm" variant="ghost">Learn More</Button>
+            {[1, 2, 3].map((game) => (
+              <Card key={game} className="glass-card group hover:scale-105 transition-transform">
+                <CardContent className="p-0">
+                  <div className="aspect-video bg-gradient-to-br from-primary/10 to-accent/10 rounded-t-lg flex items-center justify-center">
+                    <Gamepad2 className="w-12 h-12 text-primary/60" />
                   </div>
-                </div>
-              </CardContent>
-            </Card>
-          ))}
-        
-          {/* Section 2 */}
-          { [1, 2, 3].slice(1, 2).map((game) => (
-            <Card key={`s2-${game}`} className="glass-card group hover:scale-105 transition-transform">
-              <CardContent className="p-0">
-                <div className="aspect-video bg-gradient-to-br from-primary/10 to-accent/10 rounded-t-lg flex items-center justify-center">
-                  <Gamepad2 className="w-12 h-12 text-primary/60" />
-                </div>
-                <div className="p-6">
-                  <h4 className="text-xl font-semibold mb-2">[Game {game} Title]</h4>
-                  <p className="text-muted-foreground mb-4">[Add game description, genre, and key features]</p>
-                  <div className="flex gap-2">
-                    <Button size="sm" variant="outline">
-                      <ExternalLink className="w-3 h-3 mr-1" />
-                      Play Demo
-                    </Button>
-                    <Button size="sm" variant="ghost">Learn More</Button>
+                  <div className="p-6">
+                    <h4 className="text-xl font-semibold mb-2">Zombielator Survival</h4>
+                    <p className="text-muted-foreground mb-4">
+                      Dive into frantic, vampire-survivor-style action with this bullet-hell roguelike inspired by Vampire Survivors. As the undead horde closes in, dodge a relentless barrage of projectiles and unleash over-the-top weapons and power-ups. Ultimate goal: survive wave after wave, screen-clearing explosions, epic boss fights, and ever-escalating chaos. Perfect for quick plays and high-score chasers!
+                    </p>
+                    <div className="flex gap-2">
+                      <Button size="sm" variant="outline">
+                        <ExternalLink className="w-3 h-3 mr-1" />
+                        Play Demo
+                      </Button>
+                      <Button size="sm" variant="ghost">Learn More</Button>
+                    </div>
                   </div>
-                </div>
-              </CardContent>
-            </Card>
-          ))}
-        
-          {/* Section 3 */}
-          { [1, 2, 3].slice(2, 3).map((game) => (
-            <Card key={`s3-${game}`} className="glass-card group hover:scale-105 transition-transform">
-              <CardContent className="p-0">
-                <div className="aspect-video bg-gradient-to-br from-primary/10 to-accent/10 rounded-t-lg flex items-center justify-center">
-                  <Gamepad2 className="w-12 h-12 text-primary/60" />
-                </div>
-                <div className="p-6">
-                  <h4 className="text-xl font-semibold mb-2">[Game {game} Title]</h4>
-                  <p className="text-muted-foreground mb-4">[Add game description, genre, and key features]</p>
-                  <div className="flex gap-2">
-                    <Button size="sm" variant="outline">
-                      <ExternalLink className="w-3 h-3 mr-1" />
-                      Play Demo
-                    </Button>
-                    <Button size="sm" variant="ghost">Learn More</Button>
-                  </div>
-                </div>
-              </CardContent>
-            </Card>
-          ))}
-        </div>
+                </CardContent>
+              </Card>
+            ))}
+          </div>
         </div>
       </section>
 
