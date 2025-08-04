@@ -228,15 +228,15 @@ const Portfolio = () => {
               <div className="space-y-4">
                 <div>
                   <h4 className="font-semibold mb-2">Email</h4>
-                  <p className="text-muted-foreground">[your.email@example.com]</p>
+                  <p className="text-muted-foreground">gcamanciomg@gmail.com</p>
                 </div>
                 <div>
                   <h4 className="font-semibold mb-2">Phone</h4>
-                  <p className="text-muted-foreground">[your phone number]</p>
+                  <p className="text-muted-foreground">+55 (37) 9 9993-4666</p>
                 </div>
                 <div>
                   <h4 className="font-semibold mb-2">Location</h4>
-                  <p className="text-muted-foreground">[your location]</p>
+                  <p className="text-muted-foreground">Divinópolis, Minas Gerais - Brazil</p>
                 </div>
                 <div>
                   <h4 className="font-semibold mb-2">Social Links</h4>
