@@ -62,8 +62,12 @@ const Portfolio = () => {
                     Outside of work, I’m passionate about game development, currently building projects in Java and Unity that combine technical skill with creative design. Whether automating workflows or crafting immersive gameplay, I’m driven by the challenge of creating efficient, impactful, and engaging digital experiences.
                   </p>
                 </div>
-                <div className="aspect-square bg-gradient-to-br from-primary/20 to-accent/20 rounded-lg flex items-center justify-center">
-                  <span className="text-4xl font-bold text-primary/50">[YOUR PHOTO]</span>
+                <div className="aspect-square bg-gradient-to-br from-primary/20 to-accent/20 rounded-lg overflow-hidden">
+                  <img 
+                    src="https://images.unsplash.com/photo-1486312338219-ce68d2c6f44d?w=400&h=400&fit=crop&crop=face" 
+                    alt="Guilherme Campos Amancio - Profile Photo"
+                    className="w-full h-full object-cover"
+                  />
                 </div>
               </div>
             </CardContent>
@@ -92,8 +96,12 @@ const Portfolio = () => {
                 Visit Studio Website
               </Button>
             </div>
-            <div className="aspect-video bg-gradient-to-r from-accent/20 to-primary/20 rounded-lg flex items-center justify-center">
-              <span className="text-2xl font-bold text-primary">[Studio Image/Logo]</span>
+            <div className="aspect-video bg-gradient-to-r from-accent/20 to-primary/20 rounded-lg overflow-hidden">
+              <img 
+                src="https://images.unsplash.com/photo-1485827404703-89b55fcc595e?w=600&h=400&fit=crop" 
+                alt="Velvet Paws Studio Logo/Banner"
+                className="w-full h-full object-cover"
+              />
             </div>
           </div>
 
