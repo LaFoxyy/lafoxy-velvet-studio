@@ -135,6 +135,7 @@ const Portfolio = () => {
                           href="https://velvet-paws-studio.itch.io/zombilator-survival"
                           target="_blank"
                           rel="noopener noreferrer"
+                          className="inline-flex items-center gap-1"
                         >
                           <ExternalLink className="w-3 h-3 mr-1" />
                           Play Demo
