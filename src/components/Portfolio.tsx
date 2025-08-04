@@ -149,20 +149,30 @@ const Portfolio = () => {
           
             {/* Section 2 */}
             { [1, 2, 3].slice(1, 2).map((game) => (
-              <Card key={`s2-${game}`} className="glass-card group hover:scale-105 transition-transform">
+              <Card key={`s1-${game}`} className="glass-card group hover:scale-105 transition-transform">
                 <CardContent className="p-0">
-                  <div className="aspect-video bg-gradient-to-br from-primary/10 to-accent/10 rounded-t-lg flex items-center justify-center">
-                    <Gamepad2 className="w-12 h-12 text-primary/60" />
+                   <div className="aspect-video rounded-t-lg overflow-hidden">
+                    <img
+                      src="https://imgur.com/sInnBb8"
+                      alt="Game 2 Screenshot"
+                      className="w-full h-full object-cover"
+                    />
                   </div>
                   <div className="p-6">
-                    <h4 className="text-xl font-semibold mb-2">[Game {game} Title]</h4>
-                    <p className="text-muted-foreground mb-4">[Add game description, genre, and key features]</p>
+                    <h4 className="text-xl font-semibold mb-2">Game 2 [Work in Progress]</h4>
+                    <p className="text-muted-foreground mb-4">I’m currently developing a new project with a friend — a third-person Soulslike Action RPG inspired by Atlyss. Set in a magical forest where animals speak, enemies are corrupted, and bosses are purified rather than killed, the game will feature a day-night cycle, dynamic enemy rotation, and challenging boss encounters. I’m building everything from scratch, including character and environment modeling, combat mechanics (dodge, parry, and weak points), and a skill/weapon progression system. Developed in Unity with Blender and GIMP.</p>
                     <div className="flex gap-2">
-                      <Button size="sm" variant="outline">
-                        <ExternalLink className="w-3 h-3 mr-1" />
-                        Play Demo
+                      <Button size="sm" variant="outline" aschild>
+                        <a
+                          href="https://miro.com/welcomeonboard/enNrcHNRYkxzeVVaeVJVSHU4cEZ6T1JXeXBsZG14NXZzN0sxaHQvZ3E1Sjc1ekRwUUJ0K0YrbXBTRUFEbDVkS1BFUzMySTdaQXdSZXpaRzFiU1VuVm9UVFpEcUN1RkFKa0tFdG12QUVPVU9FRHJzV0M2d0VnTTEvR2xPTnd4VWlNakdSWkpBejJWRjJhRnhhb1UwcS9BPT0hdjE=?share_link_id=898682515285"
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          className="inline-flex items-center gap-1"
+                        >
+                          <ExternalLink className="w-3 h-3 mr-1" />
+                          Play Demo
+                        </a>
                       </Button>
-                      <Button size="sm" variant="ghost">Learn More</Button>
                     </div>
                   </div>
                 </CardContent>
