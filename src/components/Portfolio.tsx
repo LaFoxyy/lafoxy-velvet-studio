@@ -98,8 +98,9 @@ const Portfolio = () => {
                   target="_blank"
                   rel="noopener noreferrer"
                   aria-label="Visit Velvet Paws Studio website"
-                />
+                >
                 Visit Studio Website
+                </Link>
               </Button>
             </div>
             <div className="aspect-video bg-gradient-to-r from-accent/20 to-primary/20 rounded-lg overflow-hidden flex items-center justify-center">
