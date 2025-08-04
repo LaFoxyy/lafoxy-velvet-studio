@@ -56,10 +56,10 @@ const Portfolio = () => {
                 <div>
                   <h3 className="text-2xl font-semibold mb-4">Developer & Game Creator</h3>
                   <p className="text-muted-foreground mb-4">
-                    [Add your bio here - describe your background, skills, and passion for development and game creation]
+                    I’m a passionate developer with a love for building interactive experiences and crafting smart solutions through automation. My journey began with self-teaching C#, Python, JavaScript, SQL, and no-code tools like n8n, which sparked my interest in blending creativity with technology. Along the way, I expanded my skills in Excel, VBA, and AI integrations, developing a toolkit that bridges both software development and intelligent workflow automation. During my Computer Engineering studies, I gained a strong foundation in C/C++, Python, Java, HTML, CSS, and SQL, which I’ve applied in real-world projects. My professional experience includes a year as an IT trainee at Engeselt (a contractor for a major energy company), where I created automated Excel systems, Python-based tools, and process-optimizing solutions for engineering projects.
                   </p>
                   <p className="text-muted-foreground">
-                    [Add more details about your journey, experience, and what drives you in your work]
+                    Today, I work at a startup specializing in AI-driven automation, where I help design and implement systems that make businesses more efficient and adaptive. Outside of work, I’m developing personal game projects—one in Java and another in Unity—continuing to explore my passion for interactive storytelling and gameplay design. For me, development is about more than just code—it’s about solving problems, pushing creative boundaries, and delivering experiences that matter.
                   </p>
                 </div>
                 <div className="aspect-square bg-gradient-to-br from-primary/20 to-accent/20 rounded-lg flex items-center justify-center">
