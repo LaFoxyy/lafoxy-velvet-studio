@@ -149,7 +149,7 @@ const Portfolio = () => {
           
             {/* Section 2 */}
             { [1, 2, 3].slice(1, 2).map((game) => (
-              <Card key={`s1-${game}`} className="glass-card group hover:scale-105 transition-transform">
+              <Card key={`s2-${game}`} className="glass-card group hover:scale-105 transition-transform">
                 <CardContent className="p-0">
                    <div className="aspect-video rounded-t-lg overflow-hidden">
                     <img
