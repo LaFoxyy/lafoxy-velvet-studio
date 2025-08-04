@@ -181,6 +181,7 @@ const Portfolio = () => {
               </Card>
             ))}
           </div>
+        </div>
       </section>
 
       {/* LaFoxy Developer Section */}
