@@ -92,15 +92,15 @@ const Portfolio = () => {
               <p className="text-muted-foreground mb-6">
                 I see game development as both a craft and a journey. Every project is a step toward mastering the art of blending gameplay, storytelling, and design. I experiment with different genres, mechanics, and styles, treating each game as both a finished product and a lesson for the next one. Velvet Paws Studio is where passion meets practice, and every line of code is part of building toward that future big dream.
               </p>
-              <Button className="bg-accent hover:bg-accent/90">
-                <Link
+              <Button asChild className="bg-accent hover:bg-accent/90">
+                <a
                   href="https://velvet-paws-studio.itch.io"
                   target="_blank"
                   rel="noopener noreferrer"
                   aria-label="Visit Velvet Paws Studio website"
                 >
-                Visit Studio Website
-                </Link>
+                  Visit Studio Website
+                </a>
               </Button>
             </div>
             <div className="aspect-video bg-gradient-to-r from-accent/20 to-primary/20 rounded-lg overflow-hidden flex items-center justify-center">
