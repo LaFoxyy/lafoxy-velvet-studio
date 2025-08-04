@@ -130,7 +130,7 @@ const Portfolio = () => {
                     <h4 className="text-xl font-semibold mb-2">Zombielator Survival</h4>
                     <p className="text-muted-foreground mb-4">Dive into frantic, vampire-survivor-style action with this bullet-hell roguelike inspired by Vampire Survivors. As the undead horde closes in, dodge a relentless barrage of projectiles and unleash over-the-top weapons and power-ups. Ultimate goal: survive wave after wave, screen-clearing explosions, epic boss fights, and ever-escalating chaos. Perfect for quick plays and high-score chasers!</p>
                     <div className="flex gap-2">
-                      <Button size="sm" variant="outline" aschild>
+                      <Button size="sm" variant="outline" asChild>
                         <a
                           href="https://velvet-paws-studio.itch.io/zombilator-survival"
                           target="_blank"
@@ -162,7 +162,7 @@ const Portfolio = () => {
                     <h4 className="text-xl font-semibold mb-2">Game 2 [Work in Progress]</h4>
                     <p className="text-muted-foreground mb-4">I’m currently developing a new portfolio project — a third-person Soulslike Action RPG inspired by Atlyss. Set in a magical forest where animals speak, enemies are corrupted, and bosses are purified rather than killed, the game features a day-night cycle, dynamic enemy rotation, and challenging boss encounters. I’m building everything from scratch, including character and environment modeling, combat mechanics (dodge, parry, and weak points), and a skill/weapon progression system. Developed in Unity with Blender and GIMP.</p>
                     <div className="flex gap-2">
-                      <Button size="sm" variant="outline" aschild>
+                      <Button size="sm" variant="outline" asChild>
                         <a
                           href="https://miro.com/welcomeonboard/enNrcHNRYkxzeVVaeVJVSHU4cEZ6T1JXeXBsZG14NXZzN0sxaHQvZ3E1Sjc1ekRwUUJ0K0YrbXBTRUFEbDVkS1BFUzMySTdaQXdSZXpaRzFiU1VuVm9UVFpEcUN1RkFKa0tFdG12QUVPVU9FRHJzV0M2d0VnTTEvR2xPTnd4VWlNakdSWkpBejJWRjJhRnhhb1UwcS9BPT0hdjE=?share_link_id=898682515285"
                           target="_blank"
@@ -170,7 +170,7 @@ const Portfolio = () => {
                           className="inline-flex items-center gap-1"
                         >
                           <ExternalLink className="w-3 h-3 mr-1" />
-                          Miro BView
+                          Miro View
                         </a>
                       </Button>
                     </div>
