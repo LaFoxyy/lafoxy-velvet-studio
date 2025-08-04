@@ -1,6 +1,7 @@
 import { Card, CardContent } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { ThemeToggle } from "@/components/ThemeToggle";
+import ImageSlider from "@/components/ImageSlider";
 import { Github, Linkedin, Twitter, ExternalLink, Code, Gamepad2 } from "lucide-react";
 
 const Portfolio = () => {
@@ -62,13 +63,12 @@ const Portfolio = () => {
                     Outside of work, I’m passionate about game development, currently building projects in Java and Unity that combine technical skill with creative design. Whether automating workflows or crafting immersive gameplay, I’m driven by the challenge of creating efficient, impactful, and engaging digital experiences.
                   </p>
                 </div>
-                <div className="aspect-square bg-gradient-to-br from-primary/20 to-accent/20 rounded-lg overflow-hidden">
-                  <img 
-                    src="https://images.unsplash.com/photo-1486312338219-ce68d2c6f44d?w=400&h=400&fit=crop&crop=face" 
-                    alt="Guilherme Campos Amancio - Profile Photo"
-                    className="w-full h-full object-cover"
-                  />
-                </div>
+                <ImageSlider
+                  beforeImage="/lovable-uploads/de5c5eaf-747d-4f09-afb6-aa7528e83826.png"
+                  afterImage="/lovable-uploads/752abd3d-3c2c-4159-ba13-f552fe01007a.png"
+                  beforeAlt="Guilherme Campos Amancio - Real Photo"
+                  afterAlt="Guilherme Campos Amancio - Alter Ego"
+                />
               </div>
             </CardContent>
           </Card>
