@@ -130,7 +130,7 @@ const Portfolio = () => {
                     <h4 className="text-xl font-semibold mb-2">Zombielator Survival</h4>
                     <p className="text-muted-foreground mb-4">Dive into frantic, vampire-survivor-style action with this bullet-hell roguelike inspired by Vampire Survivors. As the undead horde closes in, dodge a relentless barrage of projectiles and unleash over-the-top weapons and power-ups. Ultimate goal: survive wave after wave, screen-clearing explosions, epic boss fights, and ever-escalating chaos. Perfect for quick plays and high-score chasers!</p>
                     <div className="flex gap-2">
-                      <Button size="sm" variant="outline">
+                      <Button size="sm" variant="outline" aschild>
                         <a
                           href="https://velvet-paws-studio.itch.io/zombilator-survival"
                           target="_blank"
