@@ -43,13 +43,13 @@ const featuredProjects = [
   },
   {
     id: 4,
-    name: "[Project 4 Name]",
-    description: "[Add project description, technologies used, and key achievements]",
-    sourceCode: "",
+    name: "L.IA Solucões - Main page",
+    description: "This website started as a project where I built the foundation using HTML, CSS, and JavaScript. After establishing the base structure and layout, I integrated Lovable AI to help enhance the codebase, apply modern best practices, and implement a more scalable design using modern tools and libraries. Still a work in progress.",
+    sourceCode: "https://github.com/LaFoxyy/ai-automation-lia",
     coverImage: "",
     screenshots: [
       // Add 4 screenshot URLs here when ready
-      "", "", "", ""
+      "https://i.imgur.com/48Q9821.jpeg", "https://i.imgur.com/PaP3nXE.jpeg", "https://i.imgur.com/6YKRDhM.jpeg", "https://i.imgur.com/lQL4QxK.jpeg"
     ]
   },
   {
