@@ -13,6 +13,7 @@ const featuredProjects = [
     name: "Library Collection in C++",
     description: "Work carried out in the fourth semester of college, replicating a library collection for the Object-Oriented Programming course, using only OOP concepts, without delving into graphical interface development.",
     sourceCode: "https://github.com/LaFoxyy/acervoBiblioteca",
+    coverImage: "",
     screenshots: [
       // Add 4 screenshot URLs here when ready
       "https://i.imgur.com/NSQWcB5.jpeg", "https://i.imgur.com/PKdxvGD.jpeg", "https://i.imgur.com/jHJACgC.jpeg", "https://i.imgur.com/Ww6KSVX.jpeg"
@@ -23,6 +24,7 @@ const featuredProjects = [
     name: "PRORDR Maker",
     description: "An application for generating .txt files in a specific format to be used in a DOS system during the design of electrical projects and the implementation of power networks in rural areas. The application simplifies line editing, detects errors, and calculates the construction cost in USD. Developed for the company Engeselt Engenharia e Serviços Elétricos.",
     sourceCode: "https://github.com/LaFoxyy/prordrMaker",
+    coverImage: "",
     screenshots: [
       // Add 4 screenshot URLs here when ready
       "https://i.imgur.com/eYfzZLa.jpeg", "https://i.imgur.com/PEHiMPq.jpeg", "https://i.imgur.com/aXiuV7K.jpeg", "https://i.imgur.com/qHJydXm.jpeg"
@@ -33,6 +35,7 @@ const featuredProjects = [
     name: "Calculator",
     description: "This is central coordination server of a distributed calculator system developed in Java. It communicates with multiple clients and subordinate slave calculators — both basic and special — through RMI (Remote Method Invocation) and TCP sockets.",
     sourceCode: "https://github.com/LaFoxyy/calculadoraSimples",
+    coverImage: "",
     screenshots: [
       // Add 4 screenshot URLs here when ready
        "https://i.imgur.com/74kbjqF.jpeg", "https://i.imgur.com/g5MNBbS.jpeg", "https://i.imgur.com/NnEHqpL.jpeg", "https://i.imgur.com/kEYb7HV.jpeg"
@@ -43,6 +46,7 @@ const featuredProjects = [
     name: "[Project 4 Name]",
     description: "[Add project description, technologies used, and key achievements]",
     sourceCode: "",
+    coverImage: "",
     screenshots: [
       // Add 4 screenshot URLs here when ready
       "", "", "", ""
@@ -53,6 +57,7 @@ const featuredProjects = [
     name: "My First Learning Project",
     description: "This was one of my first web projects, built to practice HTML and introduce tabletop RPGs to new players.",
     sourceCode: "https://github.com/LaFoxyy/firstProject",
+    coverImage: "",
     screenshots: [
       // Add 4 screenshot URLs here when ready
       "https://i.imgur.com/1uIyfLM.jpeg", "https://i.imgur.com/yVCmUOk.jpeg", "https://i.imgur.com/BlrAo8r.jpeg", "https://i.imgur.com/plmYbKk.jpeg"
@@ -63,6 +68,7 @@ const featuredProjects = [
     name: "[Project 6 Name]",
     description: "[Add project description, technologies used, and key achievements]",
     sourceCode: "",
+    coverImage: "",
     screenshots: [
       // Add 4 screenshot URLs here when ready
       "", "", "", ""
@@ -109,12 +115,10 @@ const Portfolio = () => {
             Welcome to my creative space. Here you'll find my work as a developer and game creator.
           </p>
           <div className="flex gap-4 justify-center flex-wrap">
-            <a href="https://github.com/LaFoxyy" target="_blank" rel="noopener noreferrer">
-              <Button size="lg" className="bg-primary hover:bg-primary/90">
-                <Code className="w-4 h-4 mr-2" />
-                View My Work
-              </Button>
-            </a>
+            <Button size="lg" className="bg-primary hover:bg-primary/90">
+              <Code className="w-4 h-4 mr-2" />
+              View My Work
+            </Button>
           </div>
         </div>
       </section>
@@ -371,7 +375,12 @@ const Portfolio = () => {
               <Card key={project.id} className="glass-card group hover:scale-105 transition-transform">
                 <CardContent className="p-6">
                   <div className="aspect-video bg-gradient-to-br from-primary/10 to-accent/10 rounded-lg flex items-center justify-center mb-4">
-                    <Code className="w-12 h-12 text-primary/60" />
+                    
+                    <img
+                      src={project.coverImage}
+                      alt={project.name}
+                      className="object-cover w-full h-full transition-transform duration-300 group-hover:scale-105"
+                    />
                   </div>
                   <h4 className="text-xl font-semibold mb-2">{project.name}</h4>
                   <p className="text-muted-foreground mb-4">
