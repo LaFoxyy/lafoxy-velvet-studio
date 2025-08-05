@@ -10,12 +10,12 @@ import { useState } from "react";
 const featuredProjects = [
   {
     id: 1,
-    name: "[Project 1 Name]",
-    description: "[Add project description, technologies used, and key achievements]",
-    sourceCode: "",
+    name: "Library Collection in C++",
+    description: "Work carried out in the fourth semester of college, replicating a library collection for the Object-Oriented Programming course, using only OOP concepts, without delving into graphical interface development.",
+    sourceCode: "https://github.com/LaFoxyy/acervoBiblioteca",
     screenshots: [
       // Add 4 screenshot URLs here when ready
-      "", "", "", ""
+      "https://i.imgur.com/NSQWcB5.jpeg", "https://i.imgur.com/PKdxvGD.jpeg", "https://i.imgur.com/jHJACgC.jpeg", "https://i.imgur.com/Ww6KSVX.jpeg"
     ]
   },
   {
