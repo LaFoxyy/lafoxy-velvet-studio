@@ -109,10 +109,12 @@ const Portfolio = () => {
             Welcome to my creative space. Here you'll find my work as a developer and game creator.
           </p>
           <div className="flex gap-4 justify-center flex-wrap">
-            <Button size="lg" className="bg-primary hover:bg-primary/90">
-              <Code className="w-4 h-4 mr-2" />
-              View My Work
-            </Button>
+            <a href="https://github.com/LaFoxyy" target="_blank" rel="noopener noreferrer">
+              <Button size="lg" className="bg-primary hover:bg-primary/90">
+                <Code className="w-4 h-4 mr-2" />
+                View My Work
+              </Button>
+            </a>
           </div>
         </div>
       </section>
