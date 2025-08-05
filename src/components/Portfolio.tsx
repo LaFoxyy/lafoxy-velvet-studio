@@ -289,15 +289,17 @@ const Portfolio = () => {
             <div>
               <h3 className="text-3xl font-semibold mb-4">Development Expertise</h3>
               <p className="text-muted-foreground mb-6">
-                [Add details about your development skills, technologies you work with, and areas of expertise]
+                I specialize in C#, Python, and AI automation solutions, with a strong focus on backend development. While backend work is my preference, I’m fully capable of delivering full-stack and frontend projects when needed. My technical experience includes building scalable APIs, automating workflows, and integrating AI-driven features into applications.
               </p>
               <p className="text-muted-foreground mb-6">
-                [Add information about your development approach and what makes your work unique]
+                I learn best by doing, so I actively explore different approaches to problem-solving. This not only expands my skill set but also allows me to discover more efficient and creative solutions. I enjoy experimenting with new techniques, frameworks, and tools to keep my work innovative and adaptable. My goal is always to deliver clean, maintainable, and high-performance solutions that meet the needs of both users and businesses.
               </p>
               <div className="flex gap-4 flex-wrap">
-                <Button>
-                  <Github className="w-4 h-4 mr-2" />
-                  View GitHub
+                <Button asChild>
+                  <a href="https://github.com/LaFoxyy" target="_blank" rel="noopener noreferrer">
+                    <Github className="w-4 h-4 mr-2" />
+                      View GitHub
+                  </a>
                 </Button>
                 <Button variant="outline">Download Resume</Button>
               </div>
