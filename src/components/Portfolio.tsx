@@ -308,17 +308,54 @@ const Portfolio = () => {
 
           {/* Skills & Technologies */}
           <h3 className="text-2xl font-semibold mb-8 text-center">Technologies & Skills</h3>
-          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-4 mb-12">
-            {['Frontend', 'Backend', 'Mobile', 'Game Dev'].map((category) => (
-              <Card key={category} className="glass-card text-center">
-                <CardContent className="p-6">
-                  <h4 className="text-lg font-semibold mb-2">{category}</h4>
-                  <p className="text-sm text-muted-foreground">
-                    [List relevant technologies for {category.toLowerCase()}]
-                  </p>
-                </CardContent>
-              </Card>
-            ))}
+          <div className="grid md:grid-cols-1 lg:grid-cols-3 gap-6 mb-12">
+            <Card className="glass-card text-center">
+              <CardContent className="p-6">
+                <h4 className="text-lg font-semibold mb-4">Frontend</h4>
+                <div className="space-y-3 text-sm text-muted-foreground">
+                  <div>
+                    <p className="font-medium text-foreground mb-1">Languages & Frameworks:</p>
+                    <p>JavaScript, TypeScript</p>
+                  </div>
+                  <div>
+                    <p className="font-medium text-foreground mb-1">Tools & Platforms:</p>
+                    <p>Aseprite, Paint.NET</p>
+                  </div>
+                </div>
+              </CardContent>
+            </Card>
+            
+            <Card className="glass-card text-center">
+              <CardContent className="p-6">
+                <h4 className="text-lg font-semibold mb-4">Backend</h4>
+                <div className="space-y-3 text-sm text-muted-foreground">
+                  <div>
+                    <p className="font-medium text-foreground mb-1">Languages:</p>
+                    <p>Java, C#, C++, Python, SQL, Visual Basic</p>
+                  </div>
+                  <div>
+                    <p className="font-medium text-foreground mb-1">Technologies & Tools:</p>
+                    <p>API development, AI automation, n8n, Eclipse IDE, Visual Studio Code</p>
+                  </div>
+                </div>
+              </CardContent>
+            </Card>
+            
+            <Card className="glass-card text-center">
+              <CardContent className="p-6">
+                <h4 className="text-lg font-semibold mb-4">Game Development</h4>
+                <div className="space-y-3 text-sm text-muted-foreground">
+                  <div>
+                    <p className="font-medium text-foreground mb-1">Engines & Tools:</p>
+                    <p>Unity, Blender, Aseprite, Paint.NET</p>
+                  </div>
+                  <div>
+                    <p className="font-medium text-foreground mb-1">Programming Languages:</p>
+                    <p>C#, C++, Python</p>
+                  </div>
+                </div>
+              </CardContent>
+            </Card>
           </div>
 
           {/* Development Projects */}
