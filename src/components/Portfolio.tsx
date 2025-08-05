@@ -12,7 +12,6 @@ const featuredProjects = [
     id: 1,
     name: "Library Collection in C++",
     description: "Work carried out in the fourth semester of college, replicating a library collection for the Object-Oriented Programming course, using only OOP concepts, without delving into graphical interface development.",
-    image: "/lovable-uploads/7e1f86cf-e934-4efb-a55f-d7973d6fed15.png", // Add your main project image URL here
     sourceCode: "https://github.com/LaFoxyy/acervoBiblioteca",
     screenshots: [
       // Add 4 screenshot URLs here when ready
@@ -23,7 +22,6 @@ const featuredProjects = [
     id: 2,
     name: "[Project 2 Name]",
     description: "[Add project description, technologies used, and key achievements]",
-    image: "", // Add your main project image URL here
     sourceCode: "",
     screenshots: [
       // Add 4 screenshot URLs here when ready
@@ -34,7 +32,6 @@ const featuredProjects = [
     id: 3,
     name: "[Project 3 Name]",
     description: "[Add project description, technologies used, and key achievements]",
-    image: "", // Add your main project image URL here
     sourceCode: "",
     screenshots: [
       // Add 4 screenshot URLs here when ready
@@ -45,7 +42,6 @@ const featuredProjects = [
     id: 4,
     name: "[Project 4 Name]",
     description: "[Add project description, technologies used, and key achievements]",
-    image: "", // Add your main project image URL here
     sourceCode: "",
     screenshots: [
       // Add 4 screenshot URLs here when ready
@@ -56,7 +52,6 @@ const featuredProjects = [
     id: 5,
     name: "[Project 5 Name]",
     description: "[Add project description, technologies used, and key achievements]",
-    image: "", // Add your main project image URL here
     sourceCode: "",
     screenshots: [
       // Add 4 screenshot URLs here when ready
@@ -67,7 +62,6 @@ const featuredProjects = [
     id: 6,
     name: "[Project 6 Name]",
     description: "[Add project description, technologies used, and key achievements]",
-    image: "", // Add your main project image URL here
     sourceCode: "",
     screenshots: [
       // Add 4 screenshot URLs here when ready
@@ -370,22 +364,8 @@ const Portfolio = () => {
             {featuredProjects.map((project) => (
               <Card key={project.id} className="glass-card group hover:scale-105 transition-transform">
                 <CardContent className="p-6">
-                  <div className="aspect-video bg-muted/20 rounded-lg overflow-hidden mb-4">
-                    {project.image ? (
-                      <img 
-                        src={project.image} 
-                        alt={project.name}
-                        className="w-full h-full object-cover"
-                      />
-                    ) : (
-                      <div className="w-full h-full bg-gradient-to-br from-primary/10 to-accent/10 flex items-center justify-center">
-                        <div className="text-center text-muted-foreground">
-                          <Code className="w-12 h-12 mx-auto mb-2 text-primary/60" />
-                          <p className="text-sm">Add image URL to</p>
-                          <p className="text-xs">featuredProjects array</p>
-                        </div>
-                      </div>
-                    )}
+                  <div className="aspect-video bg-gradient-to-br from-primary/10 to-accent/10 rounded-lg flex items-center justify-center mb-4">
+                    <Code className="w-12 h-12 text-primary/60" />
                   </div>
                   <h4 className="text-xl font-semibold mb-2">{project.name}</h4>
                   <p className="text-muted-foreground mb-4">
