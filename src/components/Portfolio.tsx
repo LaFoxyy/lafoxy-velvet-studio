@@ -20,12 +20,12 @@ const featuredProjects = [
   },
   {
     id: 2,
-    name: "[Project 2 Name]",
-    description: "[Add project description, technologies used, and key achievements]",
-    sourceCode: "",
+    name: "PRORDR Maker",
+    description: "An application for generating .txt files in a specific format to be used in a DOS system during the design of electrical projects and the implementation of power networks in rural areas. The application simplifies line editing, detects errors, and calculates the construction cost in USD. Developed for the company Engeselt Engenharia e Serviços Elétricos.",
+    sourceCode: "https://github.com/LaFoxyy/prordrMaker",
     screenshots: [
       // Add 4 screenshot URLs here when ready
-      "", "", "", ""
+      "https://i.imgur.com/eYfzZLa.jpeg", "https://i.imgur.com/PEHiMPq.jpeg", "https://i.imgur.com/aXiuV7K.jpeg", "https://i.imgur.com/qHJydXm.jpeg"
     ]
   },
   {
