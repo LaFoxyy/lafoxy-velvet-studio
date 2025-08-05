@@ -3,7 +3,7 @@ import { Button } from "@/components/ui/button";
 import { Dialog, DialogContent, DialogHeader, DialogTitle, DialogTrigger } from "@/components/ui/dialog";
 import { ThemeToggle } from "@/components/ThemeToggle";
 import ImageSlider from "@/components/ImageSlider";
-import { Github, Linkedin, Twitter, ExternalLink, Code, Gamepad2, Image } from "lucide-react";
+import { Github, Linkedin, ExternalLink, Code, Gamepad2, Image } from "lucide-react";
 import { useState } from "react";
 
 // Featured Projects Data - You can edit this
@@ -473,10 +473,6 @@ const Portfolio = () => {
                     <Button variant="outline" size="sm" className="flex items-center gap-2">
                       <Linkedin className="w-4 h-4" />
                       LinkedIn
-                    </Button>
-                    <Button variant="outline" size="sm" className="flex items-center gap-2">
-                      <Twitter className="w-4 h-4" />
-                      Twitter
                     </Button>
                   </div>
                 </div>
