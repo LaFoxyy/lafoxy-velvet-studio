@@ -65,13 +65,13 @@ const featuredProjects = [
   },
   {
     id: 6,
-    name: "[Project 6 Name]",
-    description: "[Add project description, technologies used, and key achievements]",
-    sourceCode: "",
-    coverImage: "",
+    name: "Ivory Tower",
+    description: "A report and data analysis presenting the findings of a research project investigating the role and impact of university research activities in Divinópolis, Brazil, specifically from 2010 to 2020, focusing on the UEMG (State University of Minas Gerais) Divinópolis campus.",
+    sourceCode: "https://drive.google.com/file/d/1QPRtnWNATtHnnpf5VPpGSML2LA6i0B5M/view?usp=sharing",
+    coverImage: "https://i.imgur.com/DSh2iZO.jpeg",
     screenshots: [
       // Add 4 screenshot URLs here when ready
-      "", "", "", ""
+      "https://i.imgur.com/VXzj6nI.jpeg", "https://i.imgur.com/2m0dkPo.jpeg", "https://i.imgur.com/YlEiWSA.jpeg", "https://i.imgur.com/VPO20dK.jpeg"
     ]
   }
 ];
