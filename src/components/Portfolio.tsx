@@ -24,7 +24,7 @@ const featuredProjects = [
     name: "PRORDR Maker",
     description: "An application for generating .txt files in a specific format to be used in a DOS system during the design of electrical projects and the implementation of power networks in rural areas. The application simplifies line editing, detects errors, and calculates the construction cost in USD. Developed for the company Engeselt Engenharia e Serviços Elétricos.",
     sourceCode: "https://github.com/LaFoxyy/prordrMaker",
-    coverImage: "",
+    coverImage: "https://i.imgur.com/PEHiMPq.jpeg",
     screenshots: [
       // Add 4 screenshot URLs here when ready
       "https://i.imgur.com/eYfzZLa.jpeg", "https://i.imgur.com/PEHiMPq.jpeg", "https://i.imgur.com/aXiuV7K.jpeg", "https://i.imgur.com/qHJydXm.jpeg"
@@ -35,7 +35,7 @@ const featuredProjects = [
     name: "Calculator",
     description: "This is central coordination server of a distributed calculator system developed in Java. It communicates with multiple clients and subordinate slave calculators — both basic and special — through RMI (Remote Method Invocation) and TCP sockets.",
     sourceCode: "https://github.com/LaFoxyy/calculadoraSimples",
-    coverImage: "",
+    coverImage: "https://i.imgur.com/g5MNBbS.jpeg",
     screenshots: [
       // Add 4 screenshot URLs here when ready
        "https://i.imgur.com/74kbjqF.jpeg", "https://i.imgur.com/g5MNBbS.jpeg", "https://i.imgur.com/NnEHqpL.jpeg", "https://i.imgur.com/kEYb7HV.jpeg"
@@ -57,7 +57,7 @@ const featuredProjects = [
     name: "My First Learning Project",
     description: "This was one of my first web projects, built to practice HTML and introduce tabletop RPGs to new players.",
     sourceCode: "https://github.com/LaFoxyy/firstProject",
-    coverImage: "",
+    coverImage: "https://i.imgur.com/yVCmUOk.jpeg",
     screenshots: [
       // Add 4 screenshot URLs here when ready
       "https://i.imgur.com/1uIyfLM.jpeg", "https://i.imgur.com/yVCmUOk.jpeg", "https://i.imgur.com/BlrAo8r.jpeg", "https://i.imgur.com/plmYbKk.jpeg"
