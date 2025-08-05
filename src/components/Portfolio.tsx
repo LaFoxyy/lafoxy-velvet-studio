@@ -57,7 +57,7 @@ const featuredProjects = [
     name: "My First Learning Project",
     description: "This was one of my first web projects, built to practice HTML and introduce tabletop RPGs to new players.",
     sourceCode: "https://github.com/LaFoxyy/firstProject",
-    coverImage: "https://i.imgur.com/yVCmUOk.jpeg",
+    coverImage: "https://i.imgur.com/1uIyfLM.jpeg",
     screenshots: [
       // Add 4 screenshot URLs here when ready
       "https://i.imgur.com/1uIyfLM.jpeg", "https://i.imgur.com/yVCmUOk.jpeg", "https://i.imgur.com/BlrAo8r.jpeg", "https://i.imgur.com/plmYbKk.jpeg"
