@@ -65,13 +65,13 @@ const featuredProjects = [
   },
   {
     id: 6,
-    name: "Ivory Tower",
-    description: "A report and data analysis presenting the findings of a research project investigating the role and impact of university research activities in Divinópolis, Brazil, specifically from 2010 to 2020, focusing on the UEMG (State University of Minas Gerais) Divinópolis campus.",
-    sourceCode: "https://drive.google.com/file/d/1QPRtnWNATtHnnpf5VPpGSML2LA6i0B5M/view?usp=sharing",
-    coverImage: "https://i.imgur.com/DSh2iZO.jpeg",
+    name: "[Project 6 Name]",
+    description: "[Add project description, technologies used, and key achievements]",
+    sourceCode: "",
+    coverImage: "",
     screenshots: [
       // Add 4 screenshot URLs here when ready
-      "https://i.imgur.com/VXzj6nI.jpeg", "https://i.imgur.com/2m0dkPo.jpeg", "https://i.imgur.com/YlEiWSA.jpeg", "https://i.imgur.com/VPO20dK.jpeg"
+      "", "", "", ""
     ]
   }
 ];
@@ -263,14 +263,14 @@ const Portfolio = () => {
                     <Gamepad2 className="w-12 h-12 text-primary/60" />
                   </div>
                   <div className="p-6">
-                    <h4 className="text-xl font-semibold mb-2">[Game {game} Title]</h4>
-                    <p className="text-muted-foreground mb-4">[Add game description, genre, and key features]</p>
+                    <h4 className="text-xl font-semibold mb-2">[Idea in Progress]</h4>
+                    <p className="text-muted-foreground mb-4">This game is my third game that is being produced in parallel with my second game, it's still a work in progress that it's not even on the paper yet since it's going to be my main project by the end of the year.</p>
                     <div className="flex gap-2">
                       <Button size="sm" variant="outline">
                         <ExternalLink className="w-3 h-3 mr-1" />
-                        Play Demo
+                        Not Ready Yet
                       </Button>
-                      <Button size="sm" variant="ghost">Learn More</Button>
+                      <Button size="sm" variant="ghost">Please Wait</Button>
                     </div>
                   </div>
                 </CardContent>
