@@ -283,8 +283,12 @@ const Portfolio = () => {
           </p>
           
           <div className="grid lg:grid-cols-2 gap-8 items-center mb-12">
-            <div className="aspect-video bg-gradient-to-r from-primary/20 to-accent/20 rounded-lg flex items-center justify-center">
-              <Code className="w-16 h-16 text-primary/60" />
+            <div className="aspect-video bg-gradient-to-r from-primary/20 to-accent/20 rounded-lg overflow-hidden">
+              <img 
+                src="/lovable-uploads/6961036b-b26c-46d5-a6e0-074be50a3674.png" 
+                alt="Unity Development Environment"
+                className="w-full h-full object-cover"
+              />
             </div>
             <div>
               <h3 className="text-3xl font-semibold mb-4">Development Expertise</h3>
