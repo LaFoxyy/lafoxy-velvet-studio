@@ -30,12 +30,12 @@ const featuredProjects = [
   },
   {
     id: 3,
-    name: "[Project 3 Name]",
-    description: "[Add project description, technologies used, and key achievements]",
-    sourceCode: "",
+    name: "Calculator",
+    description: "This is central coordination server of a distributed calculator system developed in Java. It communicates with multiple clients and subordinate slave calculators — both basic and special — through RMI (Remote Method Invocation) and TCP sockets.",
+    sourceCode: "https://github.com/LaFoxyy/calculadoraSimples",
     screenshots: [
       // Add 4 screenshot URLs here when ready
-      "", "", "", ""
+       "https://i.imgur.com/74kbjqF.jpeg", "https://i.imgur.com/g5MNBbS.jpeg", "https://i.imgur.com/NnEHqpL.jpeg", "https://i.imgur.com/kEYb7HV.jpeg"
     ]
   },
   {
