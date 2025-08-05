@@ -287,7 +287,7 @@ const Portfolio = () => {
               <img 
                 src="/lovable-uploads/6961036b-b26c-46d5-a6e0-074be50a3674.png" 
                 alt="Unity Development Environment"
-                className="w-full h-full object-cover"
+                className="w-full h-full object-cover object-top"
               />
             </div>
             <div>
