@@ -238,7 +238,7 @@ const Portfolio = () => {
                   </div>
                   <div className="p-6">
                     <h4 className="text-xl font-semibold mb-2">{t('games.game2.title')}</h4>
-                    <p className="text-muted-foreground mb-4">I’m currently developing a new portfolio project — a third-person Soulslike Action RPG inspired by Atlyss. Set in a magical forest where animals speak, enemies are corrupted, and bosses are purified rather than killed, the game features a day-night cycle, dynamic enemy rotation, and challenging boss encounters. I’m building everything from scratch, including character and environment modeling, combat mechanics (dodge, parry, and weak points), and a skill/weapon progression system. Developed in Unity with Blender and GIMP.</p>
+                    <p className="text-muted-foreground mb-4">{t('games.game2.description')}</p>
                     <div className="flex gap-2">
                       <Button size="sm" variant="outline" asChild>
                         <a
@@ -301,7 +301,7 @@ const Portfolio = () => {
             <div>
               <h3 className="text-3xl font-semibold mb-4">{t('lafoxy.expertiseTitle')}</h3>
               <p className="text-muted-foreground mb-6">
-                I specialize in C#, Python, and AI automation solutions, with a strong focus on backend development. While backend work is my preference, I’m fully capable of delivering full-stack and frontend projects when needed. My technical experience includes building scalable APIs, automating workflows, and integrating AI-driven features into applications.
+                {t('lafoxy.description1')}
               </p>
               <p className="text-muted-foreground mb-6">
                 {t('lafoxy.description2')}
