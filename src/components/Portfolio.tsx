@@ -153,32 +153,32 @@ const Portfolio = () => {
 
       {/* Velvet Paws Studio Section */}
       <section id="velvet-paws" className="py-16 px-6 bg-muted/30">
-        <div className="container mx-auto">
-          <h2 className="text-4xl font-bold text-center mb-4 gradient-text">Velvet Paws Studio</h2>
-          <p className="text-center text-muted-foreground mb-12 max-w-2xl mx-auto">
-            My game development company focused on creating engaging and immersive gaming experiences.
-          </p>
+         <div className="container mx-auto">
+           <h2 className="text-4xl font-bold text-center mb-4 gradient-text">{t('velvetPaws.title')}</h2>
+           <p className="text-center text-muted-foreground mb-12 max-w-2xl mx-auto">
+             {t('velvetPaws.subtitle')}
+           </p>
           
           <div className="grid lg:grid-cols-2 gap-8 items-center mb-12">
-            <div>
-              <h3 className="text-3xl font-semibold mb-4">About Velvet Paws Studio</h3>
-              <p className="text-muted-foreground mb-6">
-                Velvet Paws Studio is my personal indie game development space, dedicated to learning, experimenting, and growing as a developer. My mission is to explore new ideas, build my skills, and create games that challenge me creatively and technically. While I dream of one day crafting something truly big and memorable, for now, this is my playground for turning concepts into working games—mostly for my own enjoyment and as a way to push my abilities forward.
-              </p>
-              <p className="text-muted-foreground mb-6">
-                I see game development as both a craft and a journey. Every project is a step toward mastering the art of blending gameplay, storytelling, and design. I experiment with different genres, mechanics, and styles, treating each game as both a finished product and a lesson for the next one. Velvet Paws Studio is where passion meets practice, and every line of code is part of building toward that future big dream.
-              </p>
-              <Button asChild className="bg-accent hover:bg-accent/90">
-                <a
-                  href="https://velvet-paws-studio.itch.io"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  aria-label="Visit Velvet Paws Studio website"
-                >
-                  Visit Studio Website
-                </a>
-              </Button>
-            </div>
+             <div>
+               <h3 className="text-3xl font-semibold mb-4">{t('velvetPaws.aboutTitle')}</h3>
+               <p className="text-muted-foreground mb-6">
+                 {t('velvetPaws.description1')}
+               </p>
+               <p className="text-muted-foreground mb-6">
+                 {t('velvetPaws.description2')}
+               </p>
+               <Button asChild className="bg-accent hover:bg-accent/90">
+                 <a
+                   href="https://velvet-paws-studio.itch.io"
+                   target="_blank"
+                   rel="noopener noreferrer"
+                   aria-label="Visit Velvet Paws Studio website"
+                 >
+                   {t('velvetPaws.visitWebsite')}
+                 </a>
+               </Button>
+             </div>
             <div className="aspect-video bg-gradient-to-r from-accent/20 to-primary/20 rounded-lg overflow-hidden flex items-center justify-center">
               <img 
                 src="https://i.imgur.com/7C7hA9G.png" 
@@ -188,8 +188,8 @@ const Portfolio = () => {
             </div>
           </div>
 
-          {/* Games Portfolio */}
-          <h3 className="text-2xl font-semibold mb-8 text-center">Featured Games</h3>
+           {/* Games Portfolio */}
+           <h3 className="text-2xl font-semibold mb-8 text-center">{t('velvetPaws.featuredGames')}</h3>
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
             {/* Section 1 */}
             { [1, 2, 3].slice(0, 1).map((game) => (
@@ -202,23 +202,23 @@ const Portfolio = () => {
                       className="w-full h-full object-cover"
                     />
                   </div>
-                  <div className="p-6">
-                    <h4 className="text-xl font-semibold mb-2">Zombielator Survival</h4>
-                    <p className="text-muted-foreground mb-4">Dive into frantic, vampire-survivor-style action with this bullet-hell roguelike inspired by Vampire Survivors. As the undead horde closes in, dodge a relentless barrage of projectiles and unleash over-the-top weapons and power-ups. Ultimate goal: survive wave after wave, screen-clearing explosions, epic boss fights, and ever-escalating chaos. Perfect for quick plays and high-score chasers!</p>
-                    <div className="flex gap-2">
-                      <Button size="sm" variant="outline" asChild>
-                        <a
-                          href="https://velvet-paws-studio.itch.io/zombilator-survival"
-                          target="_blank"
-                          rel="noopener noreferrer"
-                          className="inline-flex items-center gap-1"
-                        >
-                          <ExternalLink className="w-3 h-3 mr-1" />
-                          Play Demo
-                        </a>
-                      </Button>
-                    </div>
-                  </div>
+                   <div className="p-6">
+                     <h4 className="text-xl font-semibold mb-2">{t('games.zombielator.title')}</h4>
+                     <p className="text-muted-foreground mb-4">{t('games.zombielator.description')}</p>
+                     <div className="flex gap-2">
+                       <Button size="sm" variant="outline" asChild>
+                         <a
+                           href="https://velvet-paws-studio.itch.io/zombilator-survival"
+                           target="_blank"
+                           rel="noopener noreferrer"
+                           className="inline-flex items-center gap-1"
+                         >
+                           <ExternalLink className="w-3 h-3 mr-1" />
+                           {t('velvetPaws.playDemo')}
+                         </a>
+                       </Button>
+                     </div>
+                   </div>
                 </CardContent>
               </Card>
             ))}
@@ -262,17 +262,17 @@ const Portfolio = () => {
                   <div className="aspect-video bg-gradient-to-br from-primary/10 to-accent/10 rounded-t-lg flex items-center justify-center">
                     <Gamepad2 className="w-12 h-12 text-primary/60" />
                   </div>
-                  <div className="p-6">
-                    <h4 className="text-xl font-semibold mb-2">[Idea in Progress]</h4>
-                    <p className="text-muted-foreground mb-4">This game is my third game that is being produced in parallel with my second game, it's still a work in progress that it's not even on the paper yet since it's going to be my main project by the end of the year.</p>
-                    <div className="flex gap-2">
-                      <Button size="sm" variant="outline">
-                        <ExternalLink className="w-3 h-3 mr-1" />
-                        Not Ready Yet
-                      </Button>
-                      <Button size="sm" variant="ghost">Please Wait</Button>
-                    </div>
-                  </div>
+                   <div className="p-6">
+                     <h4 className="text-xl font-semibold mb-2">{t('games.idea.title')}</h4>
+                     <p className="text-muted-foreground mb-4">{t('games.idea.description')}</p>
+                     <div className="flex gap-2">
+                       <Button size="sm" variant="outline">
+                         <ExternalLink className="w-3 h-3 mr-1" />
+                         {t('velvetPaws.notReady')}
+                       </Button>
+                       <Button size="sm" variant="ghost">{t('velvetPaws.pleaseWait')}</Button>
+                     </div>
+                   </div>
                 </CardContent>
               </Card>
             ))}
@@ -282,11 +282,11 @@ const Portfolio = () => {
 
       {/* LaFoxy Developer Section */}
       <section id="lafoxy" className="py-16 px-6">
-        <div className="container mx-auto">
-          <h2 className="text-4xl font-bold text-center mb-4 gradient-text">LaFoxy</h2>
-          <p className="text-center text-muted-foreground mb-12 max-w-2xl mx-auto">
-            My development work spanning web applications, software solutions, and technical projects.
-          </p>
+         <div className="container mx-auto">
+           <h2 className="text-4xl font-bold text-center mb-4 gradient-text">{t('lafoxy.title')}</h2>
+           <p className="text-center text-muted-foreground mb-12 max-w-2xl mx-auto">
+             {t('lafoxy.subtitle')}
+           </p>
           
           <div className="grid lg:grid-cols-2 gap-8 items-center mb-12">
             <div className="aspect-video bg-gradient-to-r from-primary/20 to-accent/20 rounded-lg overflow-hidden">
@@ -321,60 +321,60 @@ const Portfolio = () => {
             </div>
           </div>
 
-          {/* Skills & Technologies */}
-          <h3 className="text-2xl font-semibold mb-8 text-center">Technologies & Skills</h3>
+           {/* Skills & Technologies */}
+           <h3 className="text-2xl font-semibold mb-8 text-center">{t('lafoxy.technologiesTitle')}</h3>
           <div className="grid md:grid-cols-1 lg:grid-cols-3 gap-6 mb-12">
-            <Card className="glass-card text-center">
-              <CardContent className="p-6">
-                <h4 className="text-lg font-semibold mb-4">Frontend</h4>
-                <div className="space-y-3 text-sm text-muted-foreground">
-                  <div>
-                    <p className="font-medium text-foreground mb-1">Languages & Frameworks:</p>
-                    <p>JavaScript, TypeScript</p>
-                  </div>
-                  <div>
-                    <p className="font-medium text-foreground mb-1">Tools & Platforms:</p>
-                    <p>Aseprite, Paint.NET</p>
-                  </div>
-                </div>
-              </CardContent>
-            </Card>
+             <Card className="glass-card text-center">
+               <CardContent className="p-6">
+                 <h4 className="text-lg font-semibold mb-4">{t('lafoxy.frontend')}</h4>
+                 <div className="space-y-3 text-sm text-muted-foreground">
+                   <div>
+                     <p className="font-medium text-foreground mb-1">{t('lafoxy.languagesFrameworks')}</p>
+                     <p>JavaScript, TypeScript</p>
+                   </div>
+                   <div>
+                     <p className="font-medium text-foreground mb-1">{t('lafoxy.toolsPlatforms')}</p>
+                     <p>Aseprite, Paint.NET</p>
+                   </div>
+                 </div>
+               </CardContent>
+             </Card>
             
-            <Card className="glass-card text-center">
-              <CardContent className="p-6">
-                <h4 className="text-lg font-semibold mb-4">Backend</h4>
-                <div className="space-y-3 text-sm text-muted-foreground">
-                  <div>
-                    <p className="font-medium text-foreground mb-1">Languages:</p>
-                    <p>Java, C#, C++, Python, SQL, Visual Basic</p>
-                  </div>
-                  <div>
-                    <p className="font-medium text-foreground mb-1">Technologies & Tools:</p>
-                    <p>API development, AI automation, n8n, Eclipse IDE, Visual Studio Code</p>
-                  </div>
-                </div>
-              </CardContent>
-            </Card>
+             <Card className="glass-card text-center">
+               <CardContent className="p-6">
+                 <h4 className="text-lg font-semibold mb-4">{t('lafoxy.backend')}</h4>
+                 <div className="space-y-3 text-sm text-muted-foreground">
+                   <div>
+                     <p className="font-medium text-foreground mb-1">{t('lafoxy.languages')}</p>
+                     <p>Java, C#, C++, Python, SQL, Visual Basic</p>
+                   </div>
+                   <div>
+                     <p className="font-medium text-foreground mb-1">{t('lafoxy.technologies')}</p>
+                     <p>API development, AI automation, n8n, Eclipse IDE, Visual Studio Code</p>
+                   </div>
+                 </div>
+               </CardContent>
+             </Card>
             
-            <Card className="glass-card text-center">
-              <CardContent className="p-6">
-                <h4 className="text-lg font-semibold mb-4">Game Development</h4>
-                <div className="space-y-3 text-sm text-muted-foreground">
-                  <div>
-                    <p className="font-medium text-foreground mb-1">Engines & Tools:</p>
-                    <p>Unity, Blender, Aseprite, Paint.NET</p>
-                  </div>
-                  <div>
-                    <p className="font-medium text-foreground mb-1">Programming Languages:</p>
-                    <p>C#, C++, Python</p>
-                  </div>
-                </div>
-              </CardContent>
-            </Card>
+             <Card className="glass-card text-center">
+               <CardContent className="p-6">
+                 <h4 className="text-lg font-semibold mb-4">{t('lafoxy.gamedev')}</h4>
+                 <div className="space-y-3 text-sm text-muted-foreground">
+                   <div>
+                     <p className="font-medium text-foreground mb-1">{t('lafoxy.engines')}</p>
+                     <p>Unity, Blender, Aseprite, Paint.NET</p>
+                   </div>
+                   <div>
+                     <p className="font-medium text-foreground mb-1">{t('lafoxy.programmingLanguages')}</p>
+                     <p>C#, C++, Python</p>
+                   </div>
+                 </div>
+               </CardContent>
+             </Card>
           </div>
 
-          {/* Development Projects */}
-          <h3 className="text-2xl font-semibold mb-8 text-center">Featured Projects</h3>
+           {/* Development Projects */}
+           <h3 className="text-2xl font-semibold mb-8 text-center">{t('lafoxy.featuredProjects')}</h3>
           <div className="grid md:grid-cols-2 gap-8">
             {featuredProjects.map((project) => (
               <Card key={project.id} className="glass-card group hover:scale-105 transition-transform">
@@ -392,24 +392,24 @@ const Portfolio = () => {
                     {project.description}
                   </p>
                   <div className="flex gap-2 flex-wrap">
-                    <Button 
-                      size="sm" 
-                      variant="outline"
-                      onClick={() => openScreenshots(project.screenshots)}
-                    >
-                      <Image className="w-3 h-3 mr-1" />
-                      Screenshots
-                    </Button>
-                    <Button size="sm" variant="outline" asChild>
-                      <a
-                        href={project.sourceCode}
-                        target="_blank"
-                        rel="noopener noreferrer"
-                      >
-                        <Github className="w-3 h-3 mr-1" />
-                        Source Code
-                      </a>
-                    </Button>
+                     <Button 
+                       size="sm" 
+                       variant="outline"
+                       onClick={() => openScreenshots(project.screenshots)}
+                     >
+                       <Image className="w-3 h-3 mr-1" />
+                       {t('lafoxy.screenshots')}
+                     </Button>
+                     <Button size="sm" variant="outline" asChild>
+                       <a
+                         href={project.sourceCode}
+                         target="_blank"
+                         rel="noopener noreferrer"
+                       >
+                         <Github className="w-3 h-3 mr-1" />
+                         {t('lafoxy.sourceCode')}
+                       </a>
+                     </Button>
                   </div>
                 </CardContent>
               </Card>
@@ -419,9 +419,9 @@ const Portfolio = () => {
           {/* Screenshots Modal */}
           <Dialog open={isScreenshotsOpen} onOpenChange={setIsScreenshotsOpen}>
             <DialogContent className="max-w-4xl">
-              <DialogHeader>
-                <DialogTitle>Project Screenshots</DialogTitle>
-              </DialogHeader>
+               <DialogHeader>
+                 <DialogTitle>{t('lafoxy.projectScreenshots')}</DialogTitle>
+               </DialogHeader>
               <div className="grid grid-cols-2 gap-4 mt-4">
                 {selectedProjectScreenshots.map((screenshot, index) => (
                   <div key={index} className="aspect-video bg-muted/20 rounded-lg flex items-center justify-center">
@@ -449,27 +449,27 @@ const Portfolio = () => {
       {/* Contact Section */}
       <section id="contact" className="py-16 px-6 bg-muted/30">
         <div className="container mx-auto text-center">
-          <h2 className="text-4xl font-bold mb-4 gradient-text">Get In Touch</h2>
-          <p className="text-muted-foreground mb-8 max-w-2xl mx-auto">
-            Interested in working together? Have a project in mind? Let's connect and bring your ideas to life.
-          </p>
+           <h2 className="text-4xl font-bold mb-4 gradient-text">{t('contact.title')}</h2>
+           <p className="text-muted-foreground mb-8 max-w-2xl mx-auto">
+             {t('contact.subtitle')}
+           </p>
           <Card className="glass-card max-w-md mx-auto">
             <CardContent className="p-8">
               <div className="space-y-4">
-                <div>
-                  <h4 className="font-semibold mb-2">Email</h4>
-                  <p className="text-muted-foreground">gcamanciomg@gmail.com</p>
-                </div>
-                <div>
-                  <h4 className="font-semibold mb-2">Phone</h4>
-                  <p className="text-muted-foreground">+55 (37) 9 9993-4666</p>
-                </div>
-                <div>
-                  <h4 className="font-semibold mb-2">Location</h4>
-                  <p className="text-muted-foreground">Divinópolis, Minas Gerais - Brazil</p>
-                </div>
-                <div>
-                  <h4 className="font-semibold mb-2">Social Links</h4>
+                 <div>
+                   <h4 className="font-semibold mb-2">{t('contact.email')}</h4>
+                   <p className="text-muted-foreground">gcamanciomg@gmail.com</p>
+                 </div>
+                 <div>
+                   <h4 className="font-semibold mb-2">{t('contact.phone')}</h4>
+                   <p className="text-muted-foreground">+55 (37) 9 9993-4666</p>
+                 </div>
+                 <div>
+                   <h4 className="font-semibold mb-2">{t('contact.location')}</h4>
+                   <p className="text-muted-foreground">Divinópolis, Minas Gerais - Brazil</p>
+                 </div>
+                 <div>
+                   <h4 className="font-semibold mb-2">{t('contact.socialLinks')}</h4>
                   <div className="flex gap-3 justify-center">
                     <a href="https://github.com/LaFoxyy" target="_blank" rel="noopener noreferrer">
                       <Button variant="outline" size="sm" className="flex items-center gap-2">
@@ -494,9 +494,9 @@ const Portfolio = () => {
       {/* Footer */}
       <footer className="py-8 px-6 border-t border-border">
         <div className="container mx-auto text-center">
-          <p className="text-muted-foreground">
-            © 2025 LaFoxy & Velvet Paws Studio. All rights reserved.
-          </p>
+           <p className="text-muted-foreground">
+             {t('footer.copyright')}
+           </p>
         </div>
       </footer>
     </div>
