@@ -133,10 +133,10 @@ const Portfolio = () => {
                 <div>
                   <h3 className="text-2xl font-semibold mb-4">{t('about.subtitle')}</h3>
                   <p className="text-muted-foreground mb-4">
-                    I’m a self-taught and formally trained developer with experience in C#, Python, JavaScript, SQL, VBA, and AI automation tools like n8n. With a background in Computer Engineering, I’ve worked on projects ranging from automated Excel systems and Python tools during my year as an IT trainee at Engeselt, to AI-driven automation solutions at my current startup role.
+                    {t('about.description1')}
                   </p>
                   <p className="text-muted-foreground">
-                    Outside of work, I’m passionate about game development, currently building projects in Java and Unity that combine technical skill with creative design. Whether automating workflows or crafting immersive gameplay, I’m driven by the challenge of creating efficient, impactful, and engaging digital experiences.
+                    {t('about.description2')}
                   </p>
                 </div>
                 <ImageSlider
