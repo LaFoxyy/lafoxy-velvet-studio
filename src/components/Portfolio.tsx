@@ -311,7 +311,8 @@ const Portfolio = () => {
                       View GitHub
                   </a>
                 </Button>
-                <Button variant="outline">Download Resume</Button>
+                <Button variant="outline">Download Resume English</Button>
+                <Button variant="outline">Download Resume Portuguese</Button>
               </div>
             </div>
           </div>
