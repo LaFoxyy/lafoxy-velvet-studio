@@ -2,83 +2,82 @@ import { Card, CardContent } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { Dialog, DialogContent, DialogHeader, DialogTitle, DialogTrigger } from "@/components/ui/dialog";
 import { ThemeToggle } from "@/components/ThemeToggle";
+import LanguageToggle from "@/components/LanguageToggle";
 import ImageSlider from "@/components/ImageSlider";
+import { useLanguage } from "@/contexts/LanguageContext";
 import { Github, Linkedin, ExternalLink, Code, Gamepad2, Image } from "lucide-react";
 import { useState } from "react";
 
 // Featured Projects Data - You can edit this
-const featuredProjects = [
+const getFeaturedProjects = (t: (key: string) => string) => [
   {
     id: 1,
-    name: "Library Collection in C++",
-    description: "Work carried out in the fourth semester of college, replicating a library collection for the Object-Oriented Programming course, using only OOP concepts, without delving into graphical interface development.",
+    name: t('projects.library.title'),
+    description: t('projects.library.description'),
     sourceCode: "https://github.com/LaFoxyy/acervoBiblioteca",
     coverImage: "https://i.imgur.com/NSQWcB5.jpeg",
     screenshots: [
-      // Add 4 screenshot URLs here when ready
       "https://i.imgur.com/NSQWcB5.jpeg", "https://i.imgur.com/PKdxvGD.jpeg", "https://i.imgur.com/jHJACgC.jpeg", "https://i.imgur.com/Ww6KSVX.jpeg"
     ]
   },
   {
     id: 2,
-    name: "PRORDR Maker",
-    description: "An application for generating .txt files in a specific format to be used in a DOS system during the design of electrical projects and the implementation of power networks in rural areas. The application simplifies line editing, detects errors, and calculates the construction cost in USD. Developed for the company Engeselt Engenharia e Serviços Elétricos.",
+    name: t('projects.prordr.title'),
+    description: t('projects.prordr.description'),
     sourceCode: "https://github.com/LaFoxyy/prordrMaker",
     coverImage: "https://i.imgur.com/aXiuV7K.jpeg",
     screenshots: [
-      // Add 4 screenshot URLs here when ready
       "https://i.imgur.com/eYfzZLa.jpeg", "https://i.imgur.com/PEHiMPq.jpeg", "https://i.imgur.com/aXiuV7K.jpeg", "https://i.imgur.com/qHJydXm.jpeg"
     ]
   },
   {
     id: 3,
-    name: "Calculator",
-    description: "This is central coordination server of a distributed calculator system developed in Java. It communicates with multiple clients and subordinate slave calculators — both basic and special — through RMI (Remote Method Invocation) and TCP sockets.",
+    name: t('projects.calculator.title'),
+    description: t('projects.calculator.description'),
     sourceCode: "https://github.com/LaFoxyy/calculadoraSimples",
     coverImage: "https://i.imgur.com/g5MNBbS.jpeg",
     screenshots: [
-      // Add 4 screenshot URLs here when ready
        "https://i.imgur.com/74kbjqF.jpeg", "https://i.imgur.com/g5MNBbS.jpeg", "https://i.imgur.com/NnEHqpL.jpeg", "https://i.imgur.com/kEYb7HV.jpeg"
     ]
   },
   {
     id: 4,
-    name: "L.IA Solucões - Main page",
-    description: "This website started as a project where I built the foundation using HTML, CSS, and JavaScript. After establishing the base structure and layout, I integrated Lovable AI to help enhance the codebase, apply modern best practices, and implement a more scalable design using modern tools and libraries. Still a work in progress.",
+    name: t('projects.lia.title'),
+    description: t('projects.lia.description'),
     sourceCode: "https://github.com/LaFoxyy/ai-automation-lia",
     coverImage: "https://i.imgur.com/dsVWBbg.jpeg",
     screenshots: [
-      // Add 4 screenshot URLs here when ready
       "https://i.imgur.com/48Q9821.jpeg", "https://i.imgur.com/PaP3nXE.jpeg", "https://i.imgur.com/6YKRDhM.jpeg", "https://i.imgur.com/lQL4QxK.jpeg"
     ]
   },
   {
     id: 5,
-    name: "My First Learning Project",
-    description: "This was one of my first web projects, built to practice HTML and introduce tabletop RPGs to new players.",
+    name: t('projects.first.title'),
+    description: t('projects.first.description'),
     sourceCode: "https://github.com/LaFoxyy/firstProject",
     coverImage: "https://i.imgur.com/1uIyfLM.jpeg",
     screenshots: [
-      // Add 4 screenshot URLs here when ready
       "https://i.imgur.com/1uIyfLM.jpeg", "https://i.imgur.com/yVCmUOk.jpeg", "https://i.imgur.com/BlrAo8r.jpeg", "https://i.imgur.com/plmYbKk.jpeg"
     ]
   },
   {
     id: 6,
-    name: "Ivory Tower",
-    description: "A report and data analysis presenting the findings of a research project investigating the role and impact of university research activities in Divinópolis, Brazil, specifically from 2010 to 2020, focusing on the UEMG (State University of Minas Gerais) Divinópolis campus.",
+    name: t('projects.ivory.title'),
+    description: t('projects.ivory.description'),
     sourceCode: "https://drive.google.com/file/d/1QPRtnWNATtHnnpf5VPpGSML2LA6i0B5M/view?usp=sharing",
     coverImage: "https://i.imgur.com/DSh2iZO.jpeg",
     screenshots: [
-      // Add 4 screenshot URLs here when ready
       "https://i.imgur.com/VXzj6nI.jpeg", "https://i.imgur.com/2m0dkPo.jpeg", "https://i.imgur.com/YlEiWSA.jpeg", "https://i.imgur.com/VPO20dK.jpeg"
     ]
   }
 ];
 
 const Portfolio = () => {
+  const { t } = useLanguage();
   const [selectedProjectScreenshots, setSelectedProjectScreenshots] = useState<string[]>([]);
   const [isScreenshotsOpen, setIsScreenshotsOpen] = useState(false);
+  
+  const featuredProjects = getFeaturedProjects(t);
 
   const openScreenshots = (screenshots: string[]) => {
     setSelectedProjectScreenshots(screenshots);
@@ -94,11 +93,12 @@ const Portfolio = () => {
             <h1 className="text-2xl font-bold gradient-text">Guilherme Campos Amancio</h1>
             <div className="flex items-center gap-6">
               <div className="hidden md:flex gap-6">
-                <a href="#about" className="text-foreground/80 hover:text-foreground transition-colors">About</a>
-                <a href="#velvet-paws" className="text-foreground/80 hover:text-foreground transition-colors">Velvet Paws Studio</a>
-                <a href="#lafoxy" className="text-foreground/80 hover:text-foreground transition-colors">LaFoxy</a>
-                <a href="#contact" className="text-foreground/80 hover:text-foreground transition-colors">Contact</a>
+                <a href="#about" className="text-foreground/80 hover:text-foreground transition-colors">{t('nav.about')}</a>
+                <a href="#velvet-paws" className="text-foreground/80 hover:text-foreground transition-colors">{t('nav.velvetPaws')}</a>
+                <a href="#lafoxy" className="text-foreground/80 hover:text-foreground transition-colors">{t('nav.lafoxy')}</a>
+                <a href="#contact" className="text-foreground/80 hover:text-foreground transition-colors">{t('nav.contact')}</a>
               </div>
+              <LanguageToggle />
               <ThemeToggle />
             </div>
           </div>
@@ -109,15 +109,15 @@ const Portfolio = () => {
       <section className="pt-24 pb-16 px-6 relative overflow-hidden">
         <div className="container mx-auto text-center relative z-10">
           <h1 className="text-6xl font-bold mb-6">
-            <span className="gradient-text">Portfolio</span>
+            <span className="gradient-text">{t('hero.title')}</span>
           </h1>
           <p className="text-xl text-muted-foreground mb-8 max-w-2xl mx-auto">
-            Welcome to my creative space. Here you'll find my work as a developer and game creator.
+            {t('hero.subtitle')}
           </p>
           <div className="flex gap-4 justify-center flex-wrap">
             <Button size="lg" className="bg-primary hover:bg-primary/90">
               <Code className="w-4 h-4 mr-2" />
-              View My Work
+              {t('hero.viewWork')}
             </Button>
           </div>
         </div>
@@ -126,12 +126,12 @@ const Portfolio = () => {
       {/* About Section */}
       <section id="about" className="py-16 px-6">
         <div className="container mx-auto">
-          <h2 className="text-4xl font-bold text-center mb-12 gradient-text">About Me</h2>
+          <h2 className="text-4xl font-bold text-center mb-12 gradient-text">{t('about.title')}</h2>
           <Card className="glass-card max-w-4xl mx-auto">
             <CardContent className="p-8">
               <div className="grid md:grid-cols-2 gap-8 items-center">
                 <div>
-                  <h3 className="text-2xl font-semibold mb-4">Developer & Game Creator</h3>
+                  <h3 className="text-2xl font-semibold mb-4">{t('about.subtitle')}</h3>
                   <p className="text-muted-foreground mb-4">
                     I’m a self-taught and formally trained developer with experience in C#, Python, JavaScript, SQL, VBA, and AI automation tools like n8n. With a background in Computer Engineering, I’ve worked on projects ranging from automated Excel systems and Python tools during my year as an IT trainee at Engeselt, to AI-driven automation solutions at my current startup role.
                   </p>
