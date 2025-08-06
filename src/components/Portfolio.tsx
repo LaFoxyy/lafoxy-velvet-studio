@@ -115,10 +115,12 @@ const Portfolio = () => {
             {t('hero.subtitle')}
           </p>
           <div className="flex gap-4 justify-center flex-wrap">
-            <Button size="lg" className="bg-primary hover:bg-primary/90">
-              <Code className="w-4 h-4 mr-2" />
-              {t('hero.viewWork')}
-            </Button>
+            <a href="https://github.com/LaFoxyy" target="_blank" rel="noopener noreferrer">
+              <Button size="lg" className="bg-primary hover:bg-primary/90">
+                <Code className="w-4 h-4 mr-2" />
+                {t('hero.viewWork')}
+              </Button>
+            </a>
           </div>
         </div>
       </section>
@@ -299,7 +301,7 @@ const Portfolio = () => {
             <div>
               <h3 className="text-3xl font-semibold mb-4">{t('lafoxy.expertiseTitle')}</h3>
               <p className="text-muted-foreground mb-6">
-                {t('lafoxy.description1')}
+                I specialize in C#, Python, and AI automation solutions, with a strong focus on backend development. While backend work is my preference, I’m fully capable of delivering full-stack and frontend projects when needed. My technical experience includes building scalable APIs, automating workflows, and integrating AI-driven features into applications.
               </p>
               <p className="text-muted-foreground mb-6">
                 {t('lafoxy.description2')}
