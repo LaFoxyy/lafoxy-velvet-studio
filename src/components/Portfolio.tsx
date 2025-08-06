@@ -471,14 +471,18 @@ const Portfolio = () => {
                 <div>
                   <h4 className="font-semibold mb-2">Social Links</h4>
                   <div className="flex gap-3 justify-center">
-                    <Button variant="outline" size="sm" className="flex items-center gap-2">
-                      <Github className="w-4 h-4" />
-                      GitHub
-                    </Button>
-                    <Button variant="outline" size="sm" className="flex items-center gap-2">
-                      <Linkedin className="w-4 h-4" />
-                      LinkedIn
-                    </Button>
+                    <a href="https://github.com/LaFoxyy" target="_blank" rel="noopener noreferrer">
+                      <Button variant="outline" size="sm" className="flex items-center gap-2">
+                        <Github className="w-4 h-4" />
+                        GitHub
+                      </Button>
+                    </a>
+                    <a href="https://www.linkedin.com/in/guilherme-campos-amancio-a02866212/" target="_blank" rel="noopener noreferrer">
+                      <Button variant="outline" size="sm" className="flex items-center gap-2">
+                        <Linkedin className="w-4 h-4" />
+                        LinkedIn
+                      </Button>
+                    </a>
                   </div>
                 </div>
               </div>
